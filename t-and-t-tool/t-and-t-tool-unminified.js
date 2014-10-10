@@ -151,7 +151,7 @@ function fnTTMboxLoadCustom(mbxName){
 	 var inwidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	 
 	 $('#ttHighlDialOverlay').css({display: 'none',	position: 'fixed', left: '0px', top: '0px', width:'100%', height: ($(document).height())+'px', textAlign: 'center', zIndex: '1000', background: '#aaaaaa url(http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x', opacity: '0.3', filter: 'Alpha(Opacity=30)'});
-	  $('#ttHighlDialContentWrap').css({display: 'none', position: 'fixed', left: (Math.floor(inwidth/2)-350) +'px', top: '50px', width: '700px', float: 'left',	border: '1px solid #000', padding: '3px', textAlign: 'left', fontSize: '12px', fontFamily: 'Verdana,Arial,sans-serif', borderRadius: '4px', border: '1px solid #aaaaaa', background: '#ffffff url(http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x', zIndex: '99999'});
+	  $('#ttHighlDialContentWrap').css({display: 'none', position: 'fixed', left: (Math.floor(inwidth/2)-350) +'px', top: '130px', width: '700px', float: 'left',	border: '1px solid #000', padding: '3px', textAlign: 'left', fontSize: '12px', fontFamily: 'Verdana,Arial,sans-serif', borderRadius: '4px', border: '1px solid #aaaaaa', background: '#ffffff url(http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x', zIndex: '999999'});
 	  
 	  $('#ttHighlDialContent').css({padding: '5px', clear: 'both', lineHeight: '0.8'});
 	  
@@ -697,10 +697,10 @@ function fnTTMboxLoadCustom(mbxName){
 							});
 							*/
 							if ($('#anonBarcDataTimerSet').length==0){
-								$('p.logo').append('<a class="setint" id="anonBarcDataTimerSet" style="background: #00aeef; border-radius: 7px; color: #FFFFFF; cursor: pointer; display: block; font-weight:bold; height: 20px; left: 300px; padding: 5px 10px 2px; position:absolute; top: 22px;  width: auto; z-index: 9999;">Anonymize Every 0.5 sec</a>');
+								$('p.logo').append('<a class="setint" id="anonBarcDataTimerSet" style="background: #00aeef; border-radius: 7px; color: #FFFFFF; cursor: pointer; display: block; font-weight:bold; height: 20px; left: 300px; padding: 5px 10px 2px; position:absolute; top: 22px;  width: auto; z-index: 99999;">Anonymize Every 0.5 sec</a>');
 							}
 							if ($('#anonBarcDataTimerClear').length==0){
-								$('p.logo').append('<a class="clearint" id="anonBarcDataTimerClear" style="background: #00aeef; border-radius:7px; color: #FFFFFF; cursor: pointer; display: block; font-weight:bold; height: 20px; left: 300px; padding: 5px 10px 2px; position:absolute; top: 22px;  width: auto; z-index: 9999; display: none;">STOP Anonymizing Every 0.5 sec</a>');
+								$('p.logo').append('<a class="clearint" id="anonBarcDataTimerClear" style="background: #00aeef; border-radius:7px; color: #FFFFFF; cursor: pointer; display: block; font-weight:bold; height: 20px; left: 300px; padding: 5px 10px 2px; position:absolute; top: 22px;  width: auto; z-index: 99999; display: none;">STOP Anonymizing Every 0.5 sec</a>');
 							}
 							if (typeof $(document).on == "undefined") { //fallback for older jquery
 								$('#anonBarcDataTimerSet').live('click',function(e){
