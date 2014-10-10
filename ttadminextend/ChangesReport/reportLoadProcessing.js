@@ -59,15 +59,15 @@ $(function() {
 		});
 
 		$( "#inpCampaignLogFilter" ).live("keyup", function(e) {
-			var inpVal = $(this).val(),
-				selectHide="table tbody:not(:contains('"+inpVal+"'))", selectShow="table tbody:contains('"+inpVal+"')";
-			if (inpVal!=''){
+			var inpVal2 = $(this).val(),
+				selectHide="table tbody:not(:contains('"+inpVal2+"')).closest('table')", selectShow="table tbody:contains('"+inpVal2+"').closest('table')";
+			if (inpVal2!=''){
 				$(selectHide).hide();
 				$(selectHide).prev('h1.campaignNamehead').hide();
 				$(selectShow).show();
-				$(selectShow).next('h1.campaignNamehead').show();
+				$(selectShow).prev('h1.campaignNamehead').show();
 			}else{
-				$('table tbody').show().prev('h1.campaignNamehead').show();
+				$('table tbody').closest('table').show().prev('h1.campaignNamehead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
 			}
 		});
 
