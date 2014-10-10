@@ -44,7 +44,7 @@ $(function() {
 			'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." />\r\n ' +
 			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 
-		//Attach event
+		//Attach events
 		$( "#inpCampaignIDNameFilter" ).live("keyup", function(e) {
 			var inpVal = $(this).val(),
 				selectHide="h1.campaignNamehead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNamehead:contains('"+inpVal+"')";
@@ -55,6 +55,19 @@ $(function() {
 				$(selectShow).next('table').show();
 			}else{
 				$('h1.campaignNamehead').show().next('table').show();
+			}
+		});
+
+		$( "#inpCampaignLogFilter" ).live("keyup", function(e) {
+			var inpVal = $(this).val(),
+				selectHide="table tbody:not(:contains('"+inpVal+"'))", selectShow="table tbody:contains('"+inpVal+"')";
+			if (inpVal!=''){
+				$(selectHide).hide();
+				$(selectHide).prev('h1.campaignNamehead').hide();
+				$(selectShow).show();
+				$(selectShow).next('h1.campaignNamehead').show();
+			}else{
+				$('table tbody').show().prev('h1.campaignNamehead').show();
 			}
 		});
 
