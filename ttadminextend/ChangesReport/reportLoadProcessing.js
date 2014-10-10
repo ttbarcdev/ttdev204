@@ -35,24 +35,28 @@ $(function() {
 		};
 	});
 
-	//Add filter logic
-	$('<div id="filterWrap">' +
-		'<label for="inpCampaignIDNameFilter" class="filterLabel">Filter by Campaign ID/Name:</label><input type="text" id="inpCampaignIDNameFilter" name="inpCampaignIDNameFilter" placeholder="Type in part of a campaign name or id, filter would apply on every keystroke. Clear to see all." />\r\n ' +
-		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
+	setTimeout(function(){
 
-	//Attach event
-	$( "#inpCampaignIDNameFilter" ).keyup(function(e) {
-		var inpVal = $(this).val(),
-			selectHide="h1.campaignNamehead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNamehead:contains('"+inpVal+"')";
-		if (inpVal!=''){
-			$(selectHide).hide();
-			$(selectHide).next('table').hide();
-			$(selectShow).show();
-			$(selectShow).next('table').show();
-		}else{
-			$('h1.campaignNamehead').show().next('table').show();
-		}
-	});
+		//Add filter logic
+		$('<div id="filterWrap">' +
+			'<label for="inpCampaignIDNameFilter" class="filterLabel">Filter by Campaign ID/Name:</label><input type="text" id="inpCampaignIDNameFilter" name="inpCampaignIDNameFilter" placeholder="Type in part of a campaign name or id, filter would apply on every keystroke. Clear to see all." />\r\n ' +
+			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
+
+		//Attach event
+		$( "#inpCampaignIDNameFilter" ).live("keyup", function(e) {
+			var inpVal = $(this).val(),
+				selectHide="h1.campaignNamehead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNamehead:contains('"+inpVal+"')";
+			if (inpVal!=''){
+				$(selectHide).hide();
+				$(selectHide).next('table').hide();
+				$(selectShow).show();
+				$(selectShow).next('table').show();
+			}else{
+				$('h1.campaignNamehead').show().next('table').show();
+			}
+		});
+
+	}, 1000);
 
 
 });
