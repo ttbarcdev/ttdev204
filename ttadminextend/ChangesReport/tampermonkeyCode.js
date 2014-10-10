@@ -390,7 +390,7 @@
 									$ttChangesCampaignIDsHTML = $j(ttChangesCampaignIDsChangeLog),
 										ttChangesCampaignIDsChangeLogHTML = $ttChangesCampaignIDsHTML.find("th:contains('Campaign History'):eq(0)").closest('table').clone().wrap('<div>').parent().html().replace('Campaign History','Campaign History <div class="showAllWrap">(Showing last 10 changes only. Click <a href="#" class="showAllCTA">here to show all</a>.)</div>');
 									ttChangesCampaignName = $ttChangesCampaignIDsHTML.find('h1[id*="campaign"]').text();
-									ttAllChangeLogsHTML=ttAllChangeLogsHTML+'\r\n<h1>'+(ttChangesCampaignIDsArrIdx+1)+'. Change Log for: ' + ttChangesCampaignName + ' ('+ ttChangesCampaignIDsArr[ttChangesCampaignIDsArrIdx] +')'+'</h1>' +ttChangesCampaignIDsChangeLogHTML;
+									ttAllChangeLogsHTML=ttAllChangeLogsHTML+'\r\n<h1 class="campaignNameHead">'+(ttChangesCampaignIDsArrIdx+1)+'. Change Log for: ' + ttChangesCampaignName + ' (<span class="campaignID">'+ ttChangesCampaignIDsArr[ttChangesCampaignIDsArrIdx] +'</span>)'+'</h1>' +ttChangesCampaignIDsChangeLogHTML;
 
 									ttChangesCampaignIDsArrIdx++;
 
