@@ -60,12 +60,12 @@ $(function() {
 
 		$( "#inpCampaignLogFilter" ).live("keyup", function(e) {
 			var inpVal2 = $(this).val(),
-				selectHide="table tbody:not(:contains('"+inpVal2+"')).closest('table')", selectShow="table tbody:contains('"+inpVal2+"').closest('table')";
+				selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')";
 			if (inpVal2!=''){
-				$(selectHide).hide();
-				$(selectHide).prev('h1.campaignNamehead').hide();
-				$(selectShow).show();
-				$(selectShow).prev('h1.campaignNamehead').show();
+				$(selectHide).closest('table').hide();
+				$(selectHide).closest('table').prev('h1.campaignNamehead').hide();
+				$(selectShow).closest('table').show();
+				$(selectShow).closest('table').prev('h1.campaignNamehead').show();
 			}else{
 				$('table tbody').closest('table').show().prev('h1.campaignNamehead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
 			}
