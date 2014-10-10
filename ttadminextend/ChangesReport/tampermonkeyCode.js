@@ -421,14 +421,14 @@
 							//create zip object
 							var ttChangesReportZip = new JSZip();
 							ttChangesReportZip.file("TT_Changes_Report.html", '' +
-								'<body>' +
-									'<head>' +
-									'<title>T&amp;T Change Log Report</title>'+
+								'<body>\r\n' +
+									'<head>\r\n' +
+									'<title>T&amp;T Change Log Report</title>\r\n'+
 									'<link href="https://ttdev204.googlecode.com/svn/ttadminextend/ChangesReport/reportLoadProcessing.css?cb='+parseInt(Math.random()*99999999)+'" rel="stylesheet" type="text/css" />\r\n' +
 									'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>\r\n' +
 									'<script src="https://ttdev204.googlecode.com/svn/ttadminextend/ChangesReport/reportLoadProcessing.js?cb='+parseInt(Math.random()*99999999)+'"></script>\r\n' +
-									'</head>' +
-								'<div style="margin: 20px 0;"><em>Note that there may be repeated campaigns in the below list. This is due to the fact that more than one change may have happened to the same campaign in the list of the last 100 changes.</em></div>'+
+									'</head>\r\n' +
+								'<div style="margin: 20px 0;"><em>Note that there may be repeated campaigns in the below list. This is due to the fact that more than one change may have happened to the same campaign in the list of the last 100 changes.</em></div>\r\n'+
 								ttAllChangeLogsHTML+
 								'</body>');
 							var ttChangesReportZipContent = ttChangesReportZip.generate({compression: "DEFLATE", type: "blob"});
