@@ -47,14 +47,14 @@ $(function() {
 		//Attach events
 		$( "#inpCampaignIDNameFilter" ).live("keyup", function(e) {
 			var inpVal = $(this).val(),
-				selectHide="h1.campaignNamehead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNamehead:contains('"+inpVal+"')";
+				selectHide="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNameHead:contains('"+inpVal+"')";
 			if (inpVal!=''){
 				$(selectHide).hide();
 				$(selectHide).next('table').hide();
 				$(selectShow).show();
 				$(selectShow).next('table').show();
 			}else{
-				$('h1.campaignNamehead').show().next('table').show();
+				$('h1.campaignNameHead').show().next('table').show();
 			}
 		});
 
@@ -63,11 +63,11 @@ $(function() {
 				selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')";
 			if (inpVal2!=''){
 				$(selectHide).closest('table').hide();
-				$(selectHide).closest('table').prev('h1.campaignNamehead').hide();
+				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
 				$(selectShow).closest('table').show();
-				$(selectShow).closest('table').prev('h1.campaignNamehead').show();
+				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
 			}else{
-				$('table tbody').closest('table').show().prev('h1.campaignNamehead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
 			}
 		});
 
