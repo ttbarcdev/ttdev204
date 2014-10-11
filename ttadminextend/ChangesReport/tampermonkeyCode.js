@@ -2,6 +2,7 @@
 	// @name        T&T Changes Report
 	// @namespace   //
 	// @include     https://admin7.testandtarget.omniture.com/admin/launchpad/launchpad.jsp
+	// @include     https://admin7.testandtarget.omniture.com/admin/launchpad.do
 	// @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.js
 	// @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.ui.js
 	// @version     0.1
