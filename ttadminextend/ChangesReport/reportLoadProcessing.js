@@ -1,14 +1,14 @@
 $(function() {
 
-  //Fix CSS3 selectors for IE7/8
-if (!jQuery.support.leadingWhitespace){
-	$('table tr:nth-child(even)').css({background: '#D6DEE2'});
-	$('table tr:nth-child(odd)').css({background: '#FFF'});
-	$('table tbody tr:nth-child(n+10)').css({display: 'none'}); /* hide 10+ rows */
-}
+	//Fix CSS3 selectors for IE7/8
+	if (!jQuery.support.leadingWhitespace) {
+		$('table tr:nth-child(even)').css({background: '#D6DEE2'});
+		$('table tr:nth-child(odd)').css({background: '#FFF'});
+		$('table tbody tr:nth-child(n+10)').css({display: 'none'});
+		/* hide 10+ rows */
+	}
 
 	//Show/hide links
-
 	$("a.showAllCTA:contains('show')").live("click",function(e){
 		e.preventDefault();
 		$(this).closest("table").find("tbody tr").show();
@@ -80,4 +80,4 @@ if (!jQuery.support.leadingWhitespace){
 	}, 1000);
 
 
-});// JavaScript Document
+});
