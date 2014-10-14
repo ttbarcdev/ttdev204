@@ -15,6 +15,7 @@ $(function() {
 		$(this).html("here to hide 10+ rows");
 		return false;
 	});
+
 	$("a.showAllCTA:contains('hide')").live("click",function(e){
 		e.preventDefault();
 		$(this).closest("table").find("tbody tr:nth-child(n+10)").hide();
