@@ -124,7 +124,7 @@ function ttSelectText(element) {
 				+'<div style="height: 1px;float: left;clear: both;width: 100%;margin-top: 5px;"></div>'				
 			+'</form>'
 			
-			+'<div id="jqUIDialAPIOfferSearchAllLoaderIco" style="display: none; float: right; position: absolute; top: 342px; left: 582px;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+			+'<div id="jqUIDialAPIOfferSearchAllLoaderIco" style="display: none; float: right; position: absolute; top: 342px; left: 582px;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
 			+'<div id="jqUIDialAPIOfferSearchAllStatus" style="margin-top: 10px; display: none; clear: both; float: left;"></div>'
 			+'<div id="jqUIDialAPIOfferSearchAllProgressBar" style="padding-top: 10px; display: none; float: none; clear: both; width: 620px; height: 20px;"></div>'			
 			+'<div id="jqUIDialAPIOfferSearchAllResultHead" style="margin-top: 20px; margin-bottom: 10px; display: none; font-weight: bold; clear: both; float: left;">Offers found (<span class="numb">0</span>) <a href="#" id="ttHidAllowEdit">:</a> </div>'			
@@ -342,7 +342,7 @@ function ttSelectText(element) {
 				+'<div style="margin-top: 10px;">'
 					+'<p style="margin-top: 10px;">Press "Generate backup" for API call to be made to Adobe and the offers list to be pulled. <br /><br />Every 400 offers will be zipped together, and the zip downloaded.<br/>More than this could crash your browser, hence the split.</p>'
 					+'<p style="margin-top: 10px; font-size: 10px;">If you have incorrect API user/pass saved, you can reset them using this link: <a href="#resetuserPass" id="jqUIDialAPIOffersBackupResetUP">Reset API user/pass</a>. <br /> Next time you use the "Get offers" button, you\'ll be prompted to confirm them again. <br />This would also happen if you haven\'t specified API user/pass yet.</p>'
-					+'<div id="jqUIDialAPIOffersBackupLoaderIco" style="display: none;width: 48px; height: 48px; position: absolute; top: 95px; right: 35px;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+					+'<div id="jqUIDialAPIOffersBackupLoaderIco" style="display: none;width: 48px; height: 48px; position: absolute; top: 95px; right: 35px;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
 					+'<div id="jqUIDialAPIOffersBackupProgressBar" style="padding-top: 10px; display: none; float: none; clear: both; width: 560px; height: 20px;"></div>'
 					+'<div id="jqUIDialAPIOffersBackupStatus" style="margin-top: 10px; display: none; clear: both; float: left;"></div>'
 				+'</div>'
@@ -555,7 +555,7 @@ function ttSelectText(element) {
 				+'<div style="margin-top: 10px;">'
 					+'<p style="margin-top: 10px;">Press "Get offers" for API call to be made to Adobe and the offers list to be pulled. <br /><br />Once that has been done, this dialog will close automatically, and you can use the updated <br />offer list.</p>'
 					+'<p style="margin-top: 10px; font-size: 10px;">If you have incorrect API user/pass saved, you can reset them using this link: <a href="#resetuserPass" id="jqUIDialAPIOfferListGenResetUP">Reset API user/pass</a>. <br /> Next time you use the "Get offers" button, you\'ll be prompted to confirm them again. <br />This would also happen if you haven\'t specified API user/pass yet.</p>'
-					+'<div id="jqUIDialAPIOfferListGenResetLoaderIco" style="display: none;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+					+'<div id="jqUIDialAPIOfferListGenResetLoaderIco" style="display: none;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
 /*					+'<div id="jqUIDialAPIOfferListProgressBarUpd" style="padding-top: 10px; display: none; float: none; clear: both; width: 560px; height: 20px;"></div>'*/
 				+'</div>'
 			+'</div>');

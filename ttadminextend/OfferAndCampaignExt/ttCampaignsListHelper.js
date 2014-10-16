@@ -24,7 +24,7 @@ function ttCleanArray(actual){
 
 var ttHelperCampaignListStrToArr = $j.jStorage.get("ttHelperCampaignsList");
 if ($j("#ttCampList").length==0){
-	$j('body').append("<div id='jqUIDialCampList' title='Select Campaings from the list. Type any part of the campaign name. Case insensitive!'><input type='text' title='Campaing List' id='ttCampList' style='width: 690px' /></div>");
+	$j('body').append("<div id='jqUIDialCampList' title='Select Campaigns from the list. Type any part of the campaign name. Case insensitive!'><input type='text' title='Campaign List' id='ttCampList' style='width: 690px' /></div>");
 }
 
 $j("#jqUIDialCampList").dialog({
@@ -105,7 +105,7 @@ if ($j("#jqUIDialAPICampSearchAll").length==0){
 				+'<div style="height: 1px;border-bottom: 1px solid #CCC;float: left;clear: both;width: 100%;margin-top: 5px;"></div>'				
 			+'</form>'
 			+'<p style="margin-top: 10px; clear: left; float: left; font-size: 11px;">All coloured lines of filters are <b>independent groups of filters</b>, and the results from each group will be <b>added</b> to the global result. <br />Each matched campaign will be listed only once, and coloured based on the first matching filter.<br /><span style="color: #3EA1CB;">If offer naming conventions have been followed, you can search for DR number, as part of the offer name.</span></p>'
-			+'<div id="jqUIDialAPICampSearchAllLoaderIco" style="display: none; float: right; position: relative; top: 40px; right: 0;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+			+'<div id="jqUIDialAPICampSearchAllLoaderIco" style="display: none; float: right; position: relative; top: 40px; right: 0;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
 			+'<div id="jqUIDialAPICampSearchAllStatus" style="margin-top: 10px; display: none; clear: both; float: left;"></div>'
 			+'<div id="jqUIDialAPICampSearchAllProgressBar" style="padding-top: 10px; display: none; float: none; clear: both; width: 690px; height: 20px;"></div>'			
 			+'<div id="jqUIDialAPICampSearchAllResultHead" style="margin-top: 20px; margin-bottom: 10px; display: none; font-weight: bold; clear: both; float: left;">Campaigns found (<span class="numb">0</span>) <a href="#" id="ttHidCampAllowEdit">:</a> </div>'			
@@ -544,7 +544,7 @@ if ($j("#jqUIDialAPIListGen").length==0){
 		+'<div style="margin-top: 10px;">'
 			+'<p style="margin-top: 10px;">Press "Get campaigns" for API call to be made to Adobe and the campaigns list to be pulled. <br /><br />Once that has been done, this dialog will close automatically, and you can use <br />the updated campaign list.</p>'
 			+'<p style="margin-top: 10px; font-size: 10px;">If you have incorrect API user/pass saved, you can reset them using this link: <a href="#resetuserPass" id="jqUIDialAPIListGenResetUP">Reset API user/pass</a>. <br /> Next time you use the "Get campaigns" button, you\'ll be prompted to confirm them again. <br />This would also happen if you haven\'t specified API user/pass yet.</p>'
-			+'<div id="jqUIDialAPIListGenResetLoaderIco" style="display: none;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+			+'<div id="jqUIDialAPIListGenResetLoaderIco" style="display: none;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
 		+'<div id="jqUIDialAPICampSearchAllStatusUpd" style="margin-top: 10px; display: none; clear: both; float: left;"></div>'
 		+'<div id="jqUIDialAPICampSearchAllProgressBarUpd" style="padding-top: 10px; display: none; float: none; clear: both; width: 560px; height: 20px;"></div>'			
 		/*+'<div id="jqUIDialAPICampSearchAllResultHeadUpd" style="margin-top: 20px; margin-bottom: 10px; display: none; font-weight: bold; clear: both; float: left;">Campaigns found (<span class="numb">0</span>)</div>'*/
@@ -730,7 +730,7 @@ if ($j("#jqUIDialAPIListGenBackup").length==0){
             +'<div style="margin-top: 10px;">'
             +'<p style="margin-top: 10px;">Press "Backup campaigns" for API call to be made to Adobe and the campaigns list to be pulled. <br /><br />Once that has been done, this dialog will close automatically.<br/><br/>Each campaign\'s setup will be saved as XML file, as well as human-readable<br/>  campaign summary in a TXT file.</p>'
             +'<p style="margin-top: 10px; font-size: 10px;">If you have incorrect API user/pass saved, you can reset them using this link: <a href="#resetuserPass" id="jqUIDialAPIListGenBackupResetUP">Reset API user/pass</a>. <br /> Next time you use the "Backup campaigns" button, you\'ll be prompted to confirm them again. <br />This would also happen if you haven\'t specified API user/pass yet.</p>'
-            +'<div id="jqUIDialAPIListGenBackupResetLoaderIco" style="display: none;"><img src="https://t-and-t-tool.googlecode.com/svn/trunk/bs_ajax_loader.gif" /></div>'
+            +'<div id="jqUIDialAPIListGenBackupResetLoaderIco" style="display: none;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" /></div>'
             +'<div id="jqUIDialAPICampSearchAllStatusUpdBackup" style="margin-top: 10px; display: none; clear: both; float: left;"></div>'
             +'<div id="jqUIDialAPICampSearchAllProgressBarUpdBackup" style="padding-top: 10px; display: none; float: none; clear: both; width: 560px; height: 20px;"></div>'
             /*+'<div id="jqUIDialAPICampSearchAllResultHeadUpd" style="margin-top: 20px; margin-bottom: 10px; display: none; font-weight: bold; clear: both; float: left;">Campaigns found (<span class="numb">0</span>)</div>'*/
