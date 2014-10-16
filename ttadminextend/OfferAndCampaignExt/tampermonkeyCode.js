@@ -9,7 +9,10 @@
 // @include     https://admin7.testandtarget.omniture.com/admin/offers/offers.jsp*
 // @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.js
 // @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.ui.js
-// @version     1.0
+// @require     https://ttdev204.googlecode.com/svn/common/jStorage.js
+// @require     https://ttdev204.googlecode.com/svn/common/jszip.js
+// @require     https://ttdev204.googlecode.com/svn/common/FileSaver.js
+// @version     1.1
 // @grant       GM_log
 /* The @grant directive is needed to work around a design change introduced in GM 1.0,
  It restores the sandbox.
