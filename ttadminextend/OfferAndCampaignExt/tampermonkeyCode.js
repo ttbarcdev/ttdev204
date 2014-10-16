@@ -7,11 +7,6 @@
 // @include     https://admin7.testandtarget.omniture.com/admin/analytics/reports/campaignStep.do*
 // @include     https://admin7.testandtarget.omniture.com/admin/campaigns/list/campaign_list.jsp*
 // @include     https://admin7.testandtarget.omniture.com/admin/offers/offers.jsp*
-// @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.js
-// @require     https://admin7.testandtarget.omniture.com/admin/scripts/jquery/jquery.ui.js
-// @require     https://ttdev204.googlecode.com/svn/common/jStorage.js
-// @require     https://ttdev204.googlecode.com/svn/common/jszip.js
-// @require     https://ttdev204.googlecode.com/svn/common/FileSaver.js
 // @version     1.1
 // @grant       GM_log
 /* The @grant directive is needed to work around a design change introduced in GM 1.0,
@@ -21,43 +16,34 @@
 
 var $j = jQuery.noConflict();
 
-function ttGetUrlParameters(parameter, staticURL, decode){
-	/*
-	 Function: getUrlParameters
-	 Description: Get the value of URL parameters either from
-	 current URL or static URL
-	 Author: Tirumal
-	 URL: www.code-tricks.com
-	 */
-	var currLocation = (staticURL.length)? staticURL : window.location.search,
-		parArr = currLocation.split("?")[1].split("&"),
-		returnBool = true;
+function ttDynLoadLib(liburl) {
 
-	for(var i = 0; i < parArr.length; i++){
-		parr = parArr[i].split("=");
-		if(parr[0] == parameter){
-			return (decode) ? decodeURIComponent(parr[1]) : parr[1];
-			returnBool = true;
-		}else{
-			returnBool = false;
+	var scripts = document.getElementsByTagName('script'),
+		testScriptLoaded=false;
+	for (var i = scripts.length; i--;) {
+		if (scripts[i].src == liburl){
+			testScriptLoaded = true;
 		}
 	}
-
-	if(!returnBool) return false;
+	if (!testScriptLoaded){
+		var c=document.createElement("script");
+		c.type="text/javascript";
+		c.src=liburl;
+		c.onload=c.onreadystatechange=function(){if((!(d=this.readyState)||d=="loaded"||d=="complete")){}};document.documentElement.childNodes[0].appendChild(c);
+	}
 }
 
+//common libs load
+function ttOffCampListEcxtComLibListLoadInsert(){
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jStorage.js');
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jszip.js');
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/FileSaver.js');
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/getUrlPar.js');
+}
+ttOffCampListEcxtComLibListLoadInsert();
+
 function ttOfferListInsert(){
-	var ttRandCacheBuster=parseInt(Math.random()*99999999);  // cache buster
-	function isMyTTToolLoaded() {
-		scripts = document.getElementsByTagName('script');
-		for (var i = scripts.length; i--;) {
-			if (scripts[i].src == "https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttOffersListHelper.js?cb="+ttRandCacheBuster) return true;
-		}
-		return false;
-	}
-	if (isMyTTToolLoaded()===false){
-		c=document.createElement("script");c.type="text/javascript";c.src="https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttOffersListHelper.js?cb="+ttRandCacheBuster;c.onload=c.onreadystatechange=function(){if((!(d=this.readyState)||d=="loaded"||d=="complete")){}};document.documentElement.childNodes[0].appendChild(c);
-	}
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttOffersListHelper.js');
 }
 
 function ttOffFilterParamsExtend(){
@@ -105,20 +91,11 @@ function ttCmpFilterIcoLoaderNextToHelp(){
 }
 
 function ttCmpListInsert(){
-	var ttRandCacheBuster=parseInt(Math.random()*99999999);  // cache buster
-	function isMyTTToolLoaded() {
-		scripts = document.getElementsByTagName('script');
-		for (var i = scripts.length; i--;) {
-			if (scripts[i].src == "https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttCampaignsListHelper.js?cb="+ttRandCacheBuster) return true;
-		}
-		return false;
-	}
-	if (isMyTTToolLoaded()===false){
-		c=document.createElement("script");c.type="text/javascript";c.src="https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttCampaignsListHelper.js?cb="+ttRandCacheBuster;c.onload=c.onreadystatechange=function(){if((!(d=this.readyState)||d=="loaded"||d=="complete")){}};document.documentElement.childNodes[0].appendChild(c);
-	}
+	ttDynLoadLib('https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttCampaignsListHelper.js');
 }
 
 function ttStartupFuncsLoader(){
+
 	//execute on doc ready + 1s
 	if (window.location.href.toString().indexOf('offers/offers.jsp')>-1){
 		setTimeout(function(){ttOffFilterParamsExtend();},1000);
