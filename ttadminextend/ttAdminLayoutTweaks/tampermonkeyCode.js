@@ -21,7 +21,7 @@ if (window.location.href.indexOf("campaign_edit_forward.jsp") >= 0) {
 
 		".aui-contextMenu {top: 8px;}";
 }
-if (window.location.href.indexOf("/launchpad/") >= 0) {
+if (window.location.href.indexOf("/launchpad") >= 0) {
 	ttinslayouttweakscssInnerHTML+="\r\n .launchpad-column.-last{width: 100%}"+
 		".aui-container-screen{width: 95%}\r\n"+
 		"#aui-main table{width: 100%}\r\n"+
@@ -35,19 +35,28 @@ if (window.location.href.indexOf("/launchpad/") >= 0) {
 
 ttinslayouttweakscss.innerHTML = ttinslayouttweakscssInnerHTML;
 ttinslayouttweakshead.appendChild(ttinslayouttweakscss);
-
 var ttinslayouttweaksscript = document.createElement('script');
 ttinslayouttweaksscript.type = 'text/javascript';
-ttinslayouttweaksscript.text = ["document.addEventListener('DOMContentLoaded', function(){setInterval(function() {"+
+ttinslayouttweaksscript.text = ["document.addEventListener('DOMContentLoaded', function(){"+
 	"if (window.location.href.indexOf(\"campaign_edit_forward.jsp\") >= 0) {"+
-	"$j('span.-ellipsified').each(function(e){$j(this).html($j('#tooltip_'+$j(this).attr('id')).html());	});"+
+	"	setInterval(function() {" +
+	"		$j('span.-ellipsified').each(function(e){$j(this).html($j('#tooltip_'+$j(this).attr('id')).html());	});" +
+	"	}, 2000);"+
 	"}"+
-	"if (window.location.href.indexOf(\"/launchpad/\") >= 0) {"+
-	"$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
-	"$j('#aui-main table .aui-v-align-t:eq(0)').css({width: '200px'});\r\n"+
-	"$j('.aui-container:contains(\"Learn how\"), h1:contains(\"Your Program Overview\")').remove();\r\n"+
+	"if (window.location.href.indexOf(\"/launchpad\") >= 0) {"+
+	"	setTimeout(function() {" +
+	"		$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
+	"		$j('#aui-main table .aui-v-align-t:eq(0)').css({width: '200px'});\r\n"+
+	"		$j('.aui-container:contains(\"Learn how\"), h1:contains(\"Your Program Overview\")').remove();\r\n"+
+	"		$j('#notesFeed .m2-notesFeed .m2-helper-breakWord a').live('click',function(e){\r\n" + /* Go to Edit tab rather then spotlight */
+	"			e.preventDefault();\r\n" +
+	"			var ttCurId = $j(this).attr('href').split('=')[1];\r\n" +
+	"			location.href='https://admin7.testandtarget.omniture.com/admin/campaign/campaign_edit_forward.jsp?campaignId='+ ttCurId;\r\n" +
+	"			return false;\r\n" +
+	"		});\r\n"+
+	"	}, 2000);\r\n"+
 	"}"+
-	"}, 2000);});",
+	"});",
 	""
 ].join('');
 ttinslayouttweakshead.appendChild(ttinslayouttweaksscript);
