@@ -1,4 +1,5 @@
 function ttGetUrlParameters(parameter, staticURL, decode){
+	// based on:
 	/*
 	 Function: getUrlParameters
 	 Description: Get the value of URL parameters either from
