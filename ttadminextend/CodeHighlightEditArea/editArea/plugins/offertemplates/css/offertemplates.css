@@ -1,0 +1,8 @@
+select#offertemplates_select{
+	background-color: #FF0000;
+}
+
+#frame_html_editor {
+	width: 100% !important;
+	height: 360px !important;
+}
