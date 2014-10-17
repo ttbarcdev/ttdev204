@@ -16,6 +16,25 @@
 
 var $j = jQuery.noConflict();
 
+function ttDynLoadLib(liburl) {
+
+	var scripts = document.getElementsByTagName('script'),
+		testScriptLoaded=false;
+	for (var i = scripts.length; i--;) {
+		if (scripts[i].src == liburl){
+			testScriptLoaded = true;
+		}
+	}
+	if (!testScriptLoaded){
+		var c=document.createElement("script");
+		c.type="text/javascript";
+		c.src=liburl;
+		c.onload=c.onreadystatechange=function(){if((!(d=this.readyState)||d=="loaded"||d=="complete")){}};document.documentElement.childNodes[0].appendChild(c);
+	}
+}
+
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/FileSaver.js');
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jszip.js');
 
 function ttChangesReportFeedProcess() {
 	if ($j('#ttChangesReportFeedProcessLink').length == 0) {
