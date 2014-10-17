@@ -7,6 +7,10 @@
 // @include     https://admin7.testandtarget.omniture.com/admin/analytics/reports/campaignStep.do*
 // @include     https://admin7.testandtarget.omniture.com/admin/campaigns/list/campaign_list.jsp*
 // @include     https://admin7.testandtarget.omniture.com/admin/offers/offers.jsp*
+// @require     https://ttdev204.googlecode.com/svn/common/jStorage.js
+// @require     https://ttdev204.googlecode.com/svn/common/jszip.js
+// @require     https://ttdev204.googlecode.com/svn/common/FileSaver.js
+// @require     https://ttdev204.googlecode.com/svn/common/getUrlPar.js
 // @version     1.1
 // @grant       GM_log
 /* The @grant directive is needed to work around a design change introduced in GM 1.0,
@@ -32,15 +36,6 @@ function ttDynLoadLib(liburl) {
 		c.onload=c.onreadystatechange=function(){if((!(d=this.readyState)||d=="loaded"||d=="complete")){}};document.documentElement.childNodes[0].appendChild(c);
 	}
 }
-
-//common libs load
-function ttOffCampListEcxtComLibListLoadInsert(){
-	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jStorage.js');
-	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jszip.js');
-	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/FileSaver.js');
-	ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/getUrlPar.js');
-}
-ttOffCampListEcxtComLibListLoadInsert();
 
 function ttOfferListInsert(){
 	ttDynLoadLib('https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttOffersListHelper.js');
