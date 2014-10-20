@@ -1,3 +1,11 @@
+var ttTypeWatch = (function(){ /* function to execute a callback, after the user has stopped typing for a specified amount of time */
+	var timer = 0;
+	return function(callback, ms){
+		clearTimeout (timer);
+		timer = setTimeout(callback, ms);
+	}
+})();
+
 $(function() {
 
 	//Fix CSS3 selectors for IE7/8
@@ -53,33 +61,47 @@ $(function() {
 
 		//Attach events
 		$( "#inpCampaignIDNameFilter" ).live("keyup", function(e) {
-			var inpVal = $(this).val(),
-				selectHide="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNameHead:contains('"+inpVal+"')";
-			if (inpVal!=''){
-				$(selectHide).hide();
-				$(selectHide).next('table').hide();
-				$(selectShow).show();
-				$(selectShow).next('table').show();
-			}else{
-				$('h1.campaignNameHead').show().next('table').show();
-			}
+
+			ttTypeWatch(function () {
+				// executed only 700 ms after the last keyup event.
+
+				var inpVal = $(this).val(),
+					selectHide="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNameHead:contains('"+inpVal+"')";
+				if (inpVal!=''){
+					$(selectHide).hide();
+					$(selectHide).next('table').hide();
+					$(selectShow).show();
+					$(selectShow).next('table').show();
+				}else{
+					$('h1.campaignNameHead').show().next('table').show();
+				}
+			}, 700);
 		});
 
 		$( "#inpCampaignLogFilter" ).live("keyup", function(e) {
-			var inpVal2 = $(this).val(),
-				selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
-			if (inpVal2!=''){
-				$(selectHide).closest('table').hide();
-				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
-				$(selectShow).closest('table').show();
-				$(selectTDHighlight).css({border: "1px solid red"});
-				$(selectTDNoHighlight).css({border: "none"});
-				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
-			}else{
-				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
-				$(selectTDHighlight).css({border: "none"});
-				$(selectTDNoHighlight).css({border: "none"});
-			}
+
+			ttTypeWatch(function () {
+				// executed only 700 ms after the last keyup event.
+
+				var inpVal2 = $(this).val(),
+					selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
+				if (inpVal2!=''){
+					$(selectHide).closest('table').hide();
+					$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
+					$(selectShow).closest('table').show();
+					$(selectTDHighlight).css({border: "1px solid red"});
+					$(selectTDNoHighlight).css({border: "none"});
+					$(selectShow).closest('table').prev('h1.campaignNameHead').show();
+				}else{
+					$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+					$(selectTDHighlight).css({border: "none"});
+					$(selectTDNoHighlight).css({border: "none"});
+				}
+
+			}, 700);
+
+
+
 		});
 
 	}, 1000);
