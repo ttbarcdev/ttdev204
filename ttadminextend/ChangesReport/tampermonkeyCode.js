@@ -183,6 +183,8 @@ function ttChangesReportFeedProcess() {
 						//create zip object
 						var ttChangesReportZip = new JSZip();
 						ttChangesReportZip.file("TT_Changes_Report.html", '' +
+							'<!DOCTYPE html>\r\n'+
+							'<html>\r\n' +
 							'<body>\r\n' +
 							'<head>\r\n' +
 							'<title>T&amp;T Change Log Report</title>\r\n'+
@@ -192,7 +194,8 @@ function ttChangesReportFeedProcess() {
 							'</head>\r\n' +
 							'<div style="margin: 20px 0;"><em>Note that there may be repeated campaigns in the below list. This is due to the fact that more than one change may have happened to the same campaign in the list of the last 100 changes.</em></div>\r\n'+
 							ttAllChangeLogsHTML+
-							'</body>');
+							'</body>\r\n'+
+							'</html>');
 						var ttChangesReportZipContent = ttChangesReportZip.generate({compression: "DEFLATE", type: "blob"});
 						ttD = new Date();
 						var ttFilenameTime = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate() + "_" + ttD.getHours() + ttD.getMinutes();
