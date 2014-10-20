@@ -188,7 +188,6 @@ function ttChangesReportFeedProcess() {
 							'<body>\r\n' +
 							'<head>\r\n' +
 							'<title>T&amp;T Change Log Report</title>\r\n'+
-							'<link href="http://ttdev204.googlecode.com/svn/ttadminextend/ChangesReport/reportLoadProcessing.css?cb='+parseInt(Math.random()*99999999)+'" rel="stylesheet" type="text/css" />\r\n' +
 							'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>\r\n' +
 							'<script src="http://ttdev204.googlecode.com/svn/ttadminextend/ChangesReport/reportLoadProcessing.js?cb='+parseInt(Math.random()*99999999)+'"></script>\r\n' +
 							'</head>\r\n' +
