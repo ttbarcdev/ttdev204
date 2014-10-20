@@ -123,10 +123,7 @@ $(function() {
 
 		});
 
-		$("#inpCampaignLogDateFilter").live("keyup", function(e) {
-
-			ttTypeWatch(function () {
-				// executed only 700 ms after the last keyup event.
+		$("#inpCampaignLogDateFilter").live("change", function(e) {
 
 				var inpVal2 = $("#inpCampaignLogDateFilter").val(),
 					selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
@@ -142,10 +139,6 @@ $(function() {
 					$(selectTDHighlight).css({border: "none"});
 					$(selectTDNoHighlight).css({border: "none"});
 				}
-
-			}, 700);
-
-
 
 		});
 
