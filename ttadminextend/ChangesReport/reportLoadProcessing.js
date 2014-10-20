@@ -77,6 +77,8 @@ $(function() {
 				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
 			}else{
 				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$(selectTDHighlight).css({border: "none"});
+				$(selectTDNoHighlight).css({border: "none"});
 			}
 		});
 
