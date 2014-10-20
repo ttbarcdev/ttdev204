@@ -90,7 +90,7 @@ $(function() {
 			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 
 		//Init datepicker
-		$( "#inpCampaignLogDateFilter" ).datepicker({ dateFormat: 'DD, MM d, yy' });
+		setTimeout(function(){$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });},1000);
 
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
