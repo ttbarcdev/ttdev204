@@ -89,9 +89,6 @@ $(function() {
 			'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter. Clear to see all." /> \r\n ' +
 			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 
-		//Init datepicker
-		setTimeout(function(){$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });},1000);
-
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
@@ -161,6 +158,9 @@ $(function() {
 		});
 
 	}, 1000);
+
+	//Init datepicker
+	setTimeout(function(){$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });},2000);
 
 
 });
