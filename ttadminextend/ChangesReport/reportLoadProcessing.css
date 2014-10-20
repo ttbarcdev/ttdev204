@@ -11,6 +11,6 @@ table tbody tr:nth-child(n+10) {display: none;} /* hide 10+ rows */
 #inpCampaignIDNameFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}
 #inpCampaignLogFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}
 #inpCampaignLogDateFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}
-.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block;}
+.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}
 
 .ui-datepicker th {font-size: 15px;}
