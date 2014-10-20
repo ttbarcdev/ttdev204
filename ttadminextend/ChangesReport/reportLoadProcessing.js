@@ -68,7 +68,7 @@ $(function() {
 			'<div></div>' +
 			'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." /> \r\n ' +
 			'<div></div>' +
-			'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter" /> \r\n ' +
+			'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter" /> \r\n ' +
 			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 
 		//Attach events
