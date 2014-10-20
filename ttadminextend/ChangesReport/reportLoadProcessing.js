@@ -60,12 +60,12 @@ $(function() {
 			'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 
 		//Attach events
-		$( "#inpCampaignIDNameFilter" ).live("keyup", function(e) {
+		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
 			ttTypeWatch(function () {
 				// executed only 700 ms after the last keyup event.
 
-				var inpVal = $(this).val(),
+				var inpVal = $("#inpCampaignIDNameFilter").val(),
 					selectHide="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNameHead:contains('"+inpVal+"')";
 				if (inpVal!=''){
 					$(selectHide).hide();
@@ -78,12 +78,12 @@ $(function() {
 			}, 700);
 		});
 
-		$( "#inpCampaignLogFilter" ).live("keyup", function(e) {
+		$("#inpCampaignLogFilter").live("keyup", function(e) {
 
 			ttTypeWatch(function () {
 				// executed only 700 ms after the last keyup event.
 
-				var inpVal2 = $(this).val(),
+				var inpVal2 = $("#inpCampaignLogFilter").val(),
 					selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
 				if (inpVal2!=''){
 					$(selectHide).closest('table').hide();
