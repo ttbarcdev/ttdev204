@@ -71,9 +71,13 @@ $(function() {
 					$(selectHide).hide();
 					$(selectHide).next('table').hide();
 					$(selectShow).show();
+					$(selectShow).css({border: "1px solid red"});
+					$(selectHide).css({border: "none"});
 					$(selectShow).next('table').show();
 				}else{
 					$('h1.campaignNameHead').show().next('table').show();
+					$(selectShow).css({border: "none"});
+					$(selectHide).css({border: "none"});
 				}
 			}, 700);
 		});
