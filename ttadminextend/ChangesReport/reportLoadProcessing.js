@@ -73,7 +73,7 @@ $(function() {
 				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
 				$(selectShow).closest('table').show();
 				$(selectTDHighlight).css({border: "1px solid red"});
-				$(selectTDNoHighlight).css({border: "1px solid blue"});
+				$(selectTDNoHighlight).css({border: "none"});
 				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
 			}else{
 				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
