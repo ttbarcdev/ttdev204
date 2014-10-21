@@ -36,14 +36,14 @@ $('<style>' +
 $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', function( data, textStatus, jqxhr ) {
 	//Add filter logic
 	$('<div id="filterWrap">' +
-		'<label for="inpCampaignIDNameFilter" class="filterLabel">Filter by Campaign ID/Name:</label><input type="text" id="inpCampaignIDNameFilter" name="inpCampaignIDNameFilter" placeholder="Type in part of a campaign name or id, filter would apply on every keystroke. Clear to see all." />\r\n ' +
+		'<label for="inpCampaignIDNameFilter" class="filterLabel">Filter by Campaign ID/Name:</label><input type="text" id="inpCampaignIDNameFilter" name="inpCampaignIDNameFilter" placeholder="Type in part of a campaign name or id, filter would apply on every keystroke. Clear to see all." /> <span class="filterClear" title="Click to clear filter"></span>\r\n ' +
 		'<div></div>' +
-		'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." /> \r\n ' +
+		'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." /> <span class="filterClear" title="Click to clear filter"></span> \r\n ' +
 		'<div></div>' +
-		'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter. Clear to see all." /> \r\n ' +
+		'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter. Clear to see all." /> <span class="filterClear" title="Click to clear filter"></span> \r\n ' +
 		'<div></div>' +
 		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
-		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> \r\n ' +
+		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> <span class="filterClear" title="Click to clear filter"></span> \r\n ' +
 		'<option value="noSelectionMade">Select a name (or select this for no filter) </option>' +
 		'</select>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
