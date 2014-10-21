@@ -133,13 +133,13 @@ $(function() {
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
-			//Clear other filters
-			$('span.filterClear:eq(1)').click();
-			$('span.filterClear:eq(2)').click();
-			$('span.filterClear:eq(3)').click();
-
+			// executed only 700 ms after the last keyup event.
 			ttTypeWatch(function () {
-				// executed only 700 ms after the last keyup event.
+
+				//Clear other filters
+				$('span.filterClear:eq(1)').click();
+				$('span.filterClear:eq(2)').click();
+				$('span.filterClear:eq(3)').click();
 
 				var inpVal = $("#inpCampaignIDNameFilter").val(),
 					selectHide="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow="h1.campaignNameHead:contains('"+inpVal+"')";
@@ -160,13 +160,13 @@ $(function() {
 
 		$("#inpCampaignLogFilter").live("keyup", function(e) {
 
-			//Clear other filters
-			$('span.filterClear:eq(0)').click();
-			$('span.filterClear:eq(2)').click();
-			$('span.filterClear:eq(3)').click();
-
+			// executed only 700 ms after the last keyup event.
 			ttTypeWatch(function () {
-				// executed only 700 ms after the last keyup event.
+
+				//Clear other filters
+				$('span.filterClear:eq(0)').click();
+				$('span.filterClear:eq(2)').click();
+				$('span.filterClear:eq(3)').click();
 
 				var inpVal2 = $("#inpCampaignLogFilter").val(),
 					selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
