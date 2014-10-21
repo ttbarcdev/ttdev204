@@ -275,7 +275,7 @@ setTimeout(function(){
 
 			var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(),
 				selectHide="table tbody:not(:contains('"+inpVal4+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal4+"'))", selectShow="table tbody:contains('"+inpVal4+"')", selectTDHighlight="table tbody td:contains('"+inpVal4+"')";
-			if (inpVal2!=''){
+			if (inpVal4!=''){
 				$(selectHide).closest('table').hide();
 				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
 				$(selectShow).closest('table').show();
