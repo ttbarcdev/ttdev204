@@ -104,6 +104,8 @@ $(function() {
 
 		}else{ //any of the other filters
 			$(this).prev().val('');
+			//trigger key up
+			$(this).prev().keyup();
 		}
 	});
 
