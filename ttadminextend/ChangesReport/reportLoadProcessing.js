@@ -25,18 +25,20 @@ $('<style>' +
 	'table tr:nth-child(even) {background: #D6DEE2;}' +
 	'table tr:nth-child(odd) {background: #FFF;}' +
 	'table tbody tr:nth-child(n+10) {display: none;} /* hide 10+ rows */' +
-	'#inpCampaignIDNameFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
-	'#inpCampaignLogFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
-	'#inpCampaignLogDateFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
+	'#inpCampaignIDNameFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
+	'#inpCampaignLogFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
+	'#inpCampaignLogDateFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
 	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px;}' +
 	'.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}' +
 	'.ui-datepicker th {font-size: 15px;}' +
-	'span.filterClear {display: none; width: 12px; height: 12px; background-image: url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/start/images/ui-icons_0078ae_256x240.png); background-position: -34px -194px; padding: 0; margin: 0; cursor: pointer;}' +
+	'span.filterClear {display: inline-block; width: 12px; height: 12px; background-image: url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/start/images/ui-icons_0078ae_256x240.png); background-position: -34px -194px; padding: 0; margin: 0; cursor: pointer;}' +
+	'#filterDisclaimer {font-size: 11px;font-weight: bold;font-family: Verdana;margin-bottom: 5px;}' +
 	'</style>').appendTo('head');
 
 $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', function( data, textStatus, jqxhr ) {
 	//Add filter logic
 	$('<div id="filterWrap">' +
+		'<div id="filterDisclaimer">Please use only one filter at a time. Changing the value of one would clear the others.</div>' +
 		'<label for="inpCampaignIDNameFilter" class="filterLabel">Filter by Campaign ID/Name:</label><input type="text" id="inpCampaignIDNameFilter" name="inpCampaignIDNameFilter" placeholder="Type in part of a campaign name or id, filter would apply on every keystroke. Clear to see all." /> <span class="filterClear" title="Click to clear filter"></span>\r\n ' +
 		'<div></div>' +
 		'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." /> <span class="filterClear" title="Click to clear filter"></span> \r\n ' +
@@ -46,7 +48,7 @@ $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.
 		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
 		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> \r\n ' +
 		'<option value="noSelectionMade">Select a name (or select this for no filter) </option>' +
-		'</select> <span class="filterClear" title="Click to clear filter"></span>' +
+		'</select> <span class="filterClear" title="Click to clear filter" style="display: none;"></span>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 	$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });
 
