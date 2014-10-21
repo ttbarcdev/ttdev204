@@ -242,6 +242,12 @@ $(function() {
 
 		});
 
+		$("#inpCampaignLogNameFilter").live("change", function(e) {
+			console.log($("#inpCampaignLogNameFilter option:selected").val());
+		});
+
+
+
 	}, 1000);
 
 });
