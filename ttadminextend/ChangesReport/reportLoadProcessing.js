@@ -242,12 +242,6 @@ $(function() {
 
 		});
 
-		$("#inpCampaignLogNameFilter").live("change", function(e) {
-			console.log($("#inpCampaignLogNameFilter option:selected").val());
-		});
-
-
-
 	}, 1000);
 
 });
@@ -271,6 +265,30 @@ setTimeout(function(){
 			.append($("<option></option>")
 				.attr("value",value)
 				.text(value));
+	});
+
+	$("#inpCampaignLogNameFilter").live("change", function(e) {
+		if ($("#inpCampaignLogNameFilter option:selected").val()=="noSelectionMade"){
+			//Clear filter
+		}else{
+			//Apply filter
+
+			var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(),
+				selectHide="table tbody:not(:contains('"+inpVal4+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal4+"'))", selectShow="table tbody:contains('"+inpVal4+"')", selectTDHighlight="table tbody td:contains('"+inpVal4+"')";
+			if (inpVal2!=''){
+				$(selectHide).closest('table').hide();
+				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
+				$(selectShow).closest('table').show();
+				$(selectTDHighlight).css({border: "1px solid red"});
+				$(selectTDNoHighlight).css({border: "none"});
+				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
+			}else{
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$(selectTDHighlight).css({border: "none"});
+				$(selectTDNoHighlight).css({border: "none"});
+			}
+
+		}
 	});
 
 },3000);
