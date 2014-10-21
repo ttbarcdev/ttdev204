@@ -98,6 +98,15 @@ $(function() {
 		};
 	});
 
+	//Clear filter icons
+	$('span.filterClear').live("click",function(){
+		if ($(this).prev().prop("tagName").toLowerCase()=="select"){ //name filter
+
+		}else{ //any of the other filters
+			$(this).prev().val('');
+		}
+	});
+
 	setTimeout(function(){
 
 		//Run through all names in the report and generate a list of non-repeatable names
@@ -107,6 +116,10 @@ $(function() {
 				ttAllNamesListArr.push(curName);
 			}
 		});
+
+		//Sort alphabetically
+		ttAllNamesListArr.sort();
+
 		//Populate the list of names to the Select
 		$.each(ttAllNamesListArr, function(key, value) {
 			$('#inpCampaignLogNameFilter')
