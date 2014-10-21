@@ -131,7 +131,7 @@ $(function() {
 	setTimeout(function(){
 
 		//Attach events
-		$("#inpCampaignIDNameFilter").live("keyup change", function(e) {
+		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
 			//Clear other filters
 			$('#inpCampaignLogFilter').val('').change();
@@ -158,7 +158,7 @@ $(function() {
 			}, 700);
 		});
 
-		$("#inpCampaignLogFilter").live("keyup change", function(e) {
+		$("#inpCampaignLogFilter").live("keyup", function(e) {
 
 			//Clear other filters
 			$('#inpCampaignIDNameFilter').val('').change();
