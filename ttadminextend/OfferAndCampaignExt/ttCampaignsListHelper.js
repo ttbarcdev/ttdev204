@@ -1006,7 +1006,9 @@ $j("#jqUIDialAPIListGenBackup").dialog({
                             var zipDateSt="", zipDateStYY = new Date().getFullYear(), zipDateStMM = (new Date().getMonth()+1) , zipDateStDD=new Date().getDate();
                             if (zipDateStMM<10){zipDateStMM="0"+zipDateStMM};
                             if (zipDateStDD<10){zipDateStDD="0"+zipDateStDD};
-                            zipDateSt = zipDateStYY + zipDateStMM + zipDateStDD;
+                            //zipDateSt = zipDateStYY + zipDateStMM + zipDateStDD;
+							var ttD = new Date();
+							zipDateSt = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate() + "_" + ttD.getHours() + ttD.getMinutes();
 
                             var ttCampaignsBackupZipContent = ttCampaignsBackupZip.generate({compression: "DEFLATE", type: "blob"});
                             saveAs(ttCampaignsBackupZipContent, zipDateSt + "_" + ttHelperCampaignListArr.length + "_CampaignsBackup.zip");
