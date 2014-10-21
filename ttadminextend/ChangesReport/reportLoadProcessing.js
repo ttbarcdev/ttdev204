@@ -121,14 +121,14 @@ $(function() {
 				$(selectTDHighlight2).css({border: "none"});
 				$(selectTDNoHighlight2).css({border: "none"});
 				$('#inpCampaignLogDateFilter').change(); //if there is something, reapply
-				$("#inpCampaignLogNameFilter').change(); //if there is something, reapply
+				$('#inpCampaignLogNameFilter').change(); //if there is something, reapply
 			}else if ($(this).prev().attr('id')=="inpCampaignLogDateFilter"){
 				var inpVal3 = $("#inpCampaignLogDateFilter").val(), selectTDNoHighlight3="table tbody td:not(:contains('"+inpVal3+"'))", selectTDHighlight3="table tbody td:contains('"+inpVal3+"')";
 				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show();
 				$(selectTDHighlight3).css({border: "none"});
 				$(selectTDNoHighlight3).css({border: "none"});
 				$('#inpCampaignLogFilter').keyup(); //if there is something, reapply
-				$("#inpCampaignLogNameFilter').change(); //if there is something, reapply
+				$('#inpCampaignLogNameFilter').change(); //if there is something, reapply
 			}
 		}
 	});
