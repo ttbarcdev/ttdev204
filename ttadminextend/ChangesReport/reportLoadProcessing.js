@@ -127,26 +127,6 @@ $(function() {
 
 	setTimeout(function(){
 
-		//Run through all names in the report and generate a list of non-repeatable names
-		$('table tbody td a[href^="mailto:"]').each(function(){
-			var curName = $.trim($(this).text());
-			if ($.inArray(curName, ttAllNamesListArr)==-1){
-				ttAllNamesListArr.push(curName);
-			}
-		});
-
-		//Sort alphabetically
-		ttAllNamesListArr.sort();
-
-		//Populate the list of names to the Select
-		$.each(ttAllNamesListArr, function(key, value) {
-			$('#inpCampaignLogNameFilter')
-				.append($("<option></option>")
-					.attr("value",value)
-					.text(value));
-		});
-
-
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
@@ -265,3 +245,26 @@ $(function() {
 	}, 1000);
 
 });
+
+setTimeout(function(){
+
+	//Run through all names in the report and generate a list of non-repeatable names
+	$('table tbody td a[href^="mailto:"]').each(function(){
+		var curName = $.trim($(this).text());
+		if ($.inArray(curName, ttAllNamesListArr)==-1){
+			ttAllNamesListArr.push(curName);
+		}
+	});
+
+	//Sort alphabetically
+	ttAllNamesListArr.sort();
+
+	//Populate the list of names to the Select
+	$.each(ttAllNamesListArr, function(key, value) {
+		$('#inpCampaignLogNameFilter')
+			.append($("<option></option>")
+				.attr("value",value)
+				.text(value));
+	});
+
+},3000);
