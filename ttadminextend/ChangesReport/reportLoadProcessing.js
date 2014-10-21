@@ -217,7 +217,7 @@ $(function() {
 
 			//Clear other filters
 			$('#inpCampaignIDNameFilter').val('');
-			var inpVal2 = $("#inpCampaignIDNameFilter").val(),	selectHide2="h1.campaignNameHead:not(:contains('"+inpVal+"'))", selectShow2="h1.campaignNameHead:contains('"+inpVal+"')";
+			var inpVal2 = $("#inpCampaignIDNameFilter").val(),	selectHide2="h1.campaignNameHead:not(:contains('"+inpVal2+"'))", selectShow2="h1.campaignNameHead:contains('"+inpVal2+"')";
 			$('h1.campaignNameHead').show().next('table').show();
 			$(selectShow2).css({border: "none"});
 			$(selectHide2).css({border: "none"});
