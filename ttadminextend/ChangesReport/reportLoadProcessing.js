@@ -28,6 +28,7 @@ $('<style>' +
 	'#inpCampaignIDNameFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
 	'#inpCampaignLogFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
 	'#inpCampaignLogDateFilter {width: 690px;padding: 4px 5px;margin-left: 10px;}' +
+	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px;}' +
 	'.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}' +
 	'.ui-datepicker th {font-size: 15px;}' +
 	'</style>').appendTo('head');
@@ -40,8 +41,15 @@ $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.
 		'<label for="inpCampaignLogFilter" class="filterLabel">Filter by Change Log keyword:</label><input type="text" id="inpCampaignLogFilter" name="inpCampaignLogFilter" placeholder="Type in part of a change log (this could be name, offer, etc), filter would apply on every keystroke. Clear to see all." /> \r\n ' +
 		'<div></div>' +
 		'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter. Clear to see all." /> \r\n ' +
+		'<div></div>' +
+		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
+		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter"> \r\n ' +
+		'<option></option> \r\n' +
+		'</select>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 	$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });
+
+
 });
 
 $(function() {
