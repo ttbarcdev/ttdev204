@@ -44,6 +44,7 @@ $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.
 		'<div></div>' +
 		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
 		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> \r\n ' +
+		'<option value="noSelectionMade">Select a name</option>' +
 		'</select>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 	$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });
@@ -109,7 +110,7 @@ $(function() {
 		$.each(ttAllNamesListArr, function(key, value) {
 			$('#inpCampaignLogNameFilter')
 				.append($("<option></option>")
-					.attr("value",key)
+					.attr("value",value)
 					.text(value));
 		});
 
