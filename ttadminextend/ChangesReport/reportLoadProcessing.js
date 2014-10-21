@@ -44,13 +44,13 @@ $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.
 		'<div></div>' +
 		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
 		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> \r\n ' +
-		'<option></option> \r\n' +
 		'</select>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
 	$("#inpCampaignLogDateFilter").datepicker({ dateFormat: 'DD, MM d, yy' });
 
-
 });
+
+var ttAllNamesListArr = [];
 
 $(function() {
 
@@ -97,6 +97,21 @@ $(function() {
 	});
 
 	setTimeout(function(){
+
+		//Run through all names in the report and generate a list of non-repeatable names
+		$('table tbody td a[href^="mailto:"]').each(function(){
+			var curName = $.trim($(this).text());
+			if ($.inArray(curName, ttAllNamesListArr)==-1){
+				ttAllNamesListArr.push(curName);
+			}
+		});
+		//Populate the list of names to the Select
+		$.each(ttAllNamesListArr, function(key, value) {
+			$('#inpCampaignLogNameFilter')
+				.append($("<option></option>")
+					.attr("value",key)
+					.text(value));
+		});
 
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
