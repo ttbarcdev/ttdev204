@@ -106,6 +106,8 @@ $(function() {
 			$(this).prev().val('');
 			//trigger key up
 			$(this).prev().keyup();
+			//trigger change
+			$(this).prev().change();
 		}
 	});
 
