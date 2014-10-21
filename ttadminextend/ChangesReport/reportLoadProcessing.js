@@ -104,8 +104,6 @@ $(function() {
 
 		}else{ //any of the other filters
 			$(this).prev().val('');
-			//trigger key up
-			$(this).prev().keyup();
 			//trigger change
 			$(this).prev().change();
 		}
@@ -133,11 +131,11 @@ $(function() {
 	setTimeout(function(){
 
 		//Attach events
-		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
+		$("#inpCampaignIDNameFilter").live("keyup, change", function(e) {
 
 			//Clear other filters
-			$('#inpCampaignLogFilter').val().keyup().change();
-			$('#inpCampaignLogDateFilter').val().keyup().change();
+			$('#inpCampaignLogFilter').val('').change();
+			$('#inpCampaignLogDateFilter').val('').change();
 			//TODO Name filter clear
 
 			ttTypeWatch(function () {
@@ -160,11 +158,11 @@ $(function() {
 			}, 700);
 		});
 
-		$("#inpCampaignLogFilter").live("keyup", function(e) {
+		$("#inpCampaignLogFilter").live("keyup, change", function(e) {
 
 			//Clear other filters
-			$('#inpCampaignIDNameFilter').val().keyup().change();
-			$('#inpCampaignLogDateFilter').val().keyup().change();
+			$('#inpCampaignIDNameFilter').val('').change();
+			$('#inpCampaignLogDateFilter').val('').change();
 			//TODO Name filter clear
 
 			ttTypeWatch(function () {
@@ -194,8 +192,8 @@ $(function() {
 		$("#inpCampaignLogDateFilter").live("change", function(e) {
 
 			//Clear other filters
-			$('#inpCampaignIDNameFilter').val().keyup().change();
-			$('#inpCampaignLogFilter').val().keyup().change();
+			$('#inpCampaignIDNameFilter').val('').change();
+			$('#inpCampaignLogFilter').val('').change();
 			//TODO Name filter clear
 
 			var inpVal2 = $("#inpCampaignLogDateFilter").val(),
