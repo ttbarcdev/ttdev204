@@ -43,7 +43,7 @@ $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.
 		'<label for="inpCampaignLogDateFilter" class="filterLabel">Filter by Change Log Date:</label><input type="text" id="inpCampaignLogDateFilter" name="inpCampaignLogDateFilter" placeholder="Date filter. Clear to see all." /> \r\n ' +
 		'<div></div>' +
 		'<label for="inpCampaignLogNameFilter" class="filterLabel" style="display: none;">Filter by Change Log Name:</label> \r\n ' +
-		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter"> \r\n ' +
+		'<select id="inpCampaignLogNameFilter" name="inpCampaignLogNameFilter" style="display: none;"> \r\n ' +
 		'<option></option> \r\n' +
 		'</select>' +
 		'</div>').insertBefore('h1.campaignNameHead:eq(0)');
