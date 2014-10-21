@@ -25,9 +25,7 @@ $('<style>' +
 	'table tr:nth-child(even) {background: #D6DEE2;}' +
 	'table tr:nth-child(odd) {background: #FFF;}' +
 	'table tbody tr:nth-child(n+10) {display: none;} /* hide 10+ rows */' +
-	'#inpCampaignIDNameFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
-	'#inpCampaignLogFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
-	'#inpCampaignLogDateFilter {width: 680px;padding: 4px 5px;margin-left: 10px;}' +
+	'#inpCampaignIDNameFilter, #inpCampaignLogFilter, #inpCampaignLogDateFilter {width: 680px;padding: 4px 5px;margin-left: 10px; margin-right: 3px;}' +
 	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px;}' +
 	'.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}' +
 	'.ui-datepicker th {font-size: 15px;}' +
