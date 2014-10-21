@@ -101,7 +101,11 @@ $(function() {
 	//Clear filter icons
 	$('span.filterClear').live("click",function(){
 		if ($(this).prev().prop("tagName").toLowerCase()=="select"){ //name filter
-			//TODO
+			$('#inpCampaignLogNameFilter option[value="noSelectionMade"]').attr("selected", "selected");
+			var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(), selectTDNoHighlight4="table tbody td:not(:contains('"+inpVal4+"'))", selectTDHighlight4="table tbody td:contains('"+inpVal4+"')";
+			$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+			$(selectTDHighlight4).css({border: "none"});
+			$(selectTDNoHighlight4).css({border: "none"});
 		}else{ //any of the other filters
 			$(this).prev().val('');
 			if ($(this).prev().attr('id')=="inpCampaignIDNameFilter"){
@@ -146,7 +150,11 @@ $(function() {
 				$(selectTDHighlight3).css({border: "none"});
 				$(selectTDNoHighlight3).css({border: "none"});
 
-				//TODO Name filter clear
+				$('#inpCampaignLogNameFilter option[value="noSelectionMade"]').attr("selected", "selected");
+				var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(), selectTDNoHighlight4="table tbody td:not(:contains('"+inpVal4+"'))", selectTDHighlight4="table tbody td:contains('"+inpVal4+"')";
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$(selectTDHighlight4).css({border: "none"});
+				$(selectTDNoHighlight4).css({border: "none"});
 
 
 				var inpVal = $("#inpCampaignIDNameFilter").val(),
@@ -184,7 +192,11 @@ $(function() {
 				$(selectTDHighlight3).css({border: "none"});
 				$(selectTDNoHighlight3).css({border: "none"});
 
-				//TODO Name filter clear
+				$('#inpCampaignLogNameFilter option[value="noSelectionMade"]').attr("selected", "selected");
+				var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(), selectTDNoHighlight4="table tbody td:not(:contains('"+inpVal4+"'))", selectTDHighlight4="table tbody td:contains('"+inpVal4+"')";
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$(selectTDHighlight4).css({border: "none"});
+				$(selectTDNoHighlight4).css({border: "none"});
 
 
 				var inpVal2 = $("#inpCampaignLogFilter").val(),
@@ -223,7 +235,12 @@ $(function() {
 			$(selectTDHighlight3).css({border: "none"});
 			$(selectTDNoHighlight3).css({border: "none"});
 
-			//TODO Name filter clear
+			$('#inpCampaignLogNameFilter option[value="noSelectionMade"]').attr("selected", "selected");
+			var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(), selectTDNoHighlight4="table tbody td:not(:contains('"+inpVal4+"'))", selectTDHighlight4="table tbody td:contains('"+inpVal4+"')";
+			$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+			$(selectTDHighlight4).css({border: "none"});
+			$(selectTDNoHighlight4).css({border: "none"});
+
 
 			var inpVal2 = $("#inpCampaignLogDateFilter").val(),
 				selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
@@ -297,5 +314,10 @@ setTimeout(function(){
 
 		}
 	});
+
+	//Show Name filter
+	$('#inpCampaignLogNameFilter').show();
+	$('#inpCampaignLogNameFilter').prev().show();
+	$('#inpCampaignLogNameFilter').next().css({display: 'inline-block'}).show();
 
 },3000);
