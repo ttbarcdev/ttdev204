@@ -135,6 +135,11 @@ $(function() {
 		//Attach events
 		$("#inpCampaignIDNameFilter").live("keyup", function(e) {
 
+			//Clear other filters
+			$('#inpCampaignLogFilter').val().keyup().change();
+			$('#inpCampaignLogDateFilter').val().keyup().change();
+			//TODO Name filter clear
+
 			ttTypeWatch(function () {
 				// executed only 700 ms after the last keyup event.
 
@@ -156,6 +161,11 @@ $(function() {
 		});
 
 		$("#inpCampaignLogFilter").live("keyup", function(e) {
+
+			//Clear other filters
+			$('#inpCampaignIDNameFilter').val().keyup().change();
+			$('#inpCampaignLogDateFilter').val().keyup().change();
+			//TODO Name filter clear
 
 			ttTypeWatch(function () {
 				// executed only 700 ms after the last keyup event.
@@ -183,20 +193,25 @@ $(function() {
 
 		$("#inpCampaignLogDateFilter").live("change", function(e) {
 
-				var inpVal2 = $("#inpCampaignLogDateFilter").val(),
-					selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
-				if (inpVal2!=''){
-					$(selectHide).closest('table').hide();
-					$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
-					$(selectShow).closest('table').show();
-					$(selectTDHighlight).css({border: "1px solid red"});
-					$(selectTDNoHighlight).css({border: "none"});
-					$(selectShow).closest('table').prev('h1.campaignNameHead').show();
-				}else{
-					$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
-					$(selectTDHighlight).css({border: "none"});
-					$(selectTDNoHighlight).css({border: "none"});
-				}
+			//Clear other filters
+			$('#inpCampaignIDNameFilter').val().keyup().change();
+			$('#inpCampaignLogFilter').val().keyup().change();
+			//TODO Name filter clear
+
+			var inpVal2 = $("#inpCampaignLogDateFilter").val(),
+				selectHide="table tbody:not(:contains('"+inpVal2+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal2+"'))", selectShow="table tbody:contains('"+inpVal2+"')", selectTDHighlight="table tbody td:contains('"+inpVal2+"')";
+			if (inpVal2!=''){
+				$(selectHide).closest('table').hide();
+				$(selectHide).closest('table').prev('h1.campaignNameHead').hide();
+				$(selectShow).closest('table').show();
+				$(selectTDHighlight).css({border: "1px solid red"});
+				$(selectTDNoHighlight).css({border: "none"});
+				$(selectShow).closest('table').prev('h1.campaignNameHead').show();
+			}else{
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show(); //$('table tbody').closest('table') differentiates between the tables I need and any other tables
+				$(selectTDHighlight).css({border: "none"});
+				$(selectTDNoHighlight).css({border: "none"});
+			}
 
 		});
 
