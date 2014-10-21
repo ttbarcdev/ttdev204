@@ -31,6 +31,7 @@ $('<style>' +
 	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px;}' +
 	'.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}' +
 	'.ui-datepicker th {font-size: 15px;}' +
+	'span.filterClear {display: none; background-image: url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/start/images/ui-icons_0078ae_256x240.png);} background-position: 10px 10px;' +
 	'</style>').appendTo('head');
 
 $.getScript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js', function( data, textStatus, jqxhr ) {
