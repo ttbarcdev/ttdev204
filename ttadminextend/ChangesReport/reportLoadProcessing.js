@@ -341,6 +341,6 @@ setTimeout(function(){
 	//Show Name filter
 	$('#inpCampaignLogNameFilter').show();
 	$('#inpCampaignLogNameFilter').prev().show();
-	$('#inpCampaignLogNameFilter').next().css({display: 'inline-block', position: 'relative', top: '2px'}).show();
+	$('#inpCampaignLogNameFilter').next().css({display: 'inline-block', position: 'relative', top: '2px', left: '0'}).show();
 
 },3000);
