@@ -101,13 +101,25 @@ $(function() {
 	//Clear filter icons
 	$('span.filterClear').live("click",function(){
 		if ($(this).prev().prop("tagName").toLowerCase()=="select"){ //name filter
-
+			//TODO
 		}else{ //any of the other filters
 			$(this).prev().val('');
-			//trigger keyup
-			$(this).prev().keyup();
-			//trigger change
-			$(this).prev().change();
+			if ($(this).prev().attr('id')=="inpCampaignIDNameFilter"){
+				var inpVal1 = $("#inpCampaignIDNameFilter").val(),	selectHide2="h1.campaignNameHead:not(:contains('"+inpVal1+"'))", selectShow2="h1.campaignNameHead:contains('"+inpVal1+"')";
+				$('h1.campaignNameHead').show().next('table').show();
+				$(selectShow2).css({border: "none"});
+				$(selectHide2).css({border: "none"});
+			}else if ($(this).prev().attr('id')=="inpCampaignLogFilter"){
+				var inpVal2 = $("#inpCampaignLogFilter").val(),	selectTDNoHighlight2="table tbody td:not(:contains('"+inpVal2+"'))", selectTDHighlight2="table tbody td:contains('"+inpVal2+"')";
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show();
+				$(selectTDHighlight2).css({border: "none"});
+				$(selectTDNoHighlight2).css({border: "none"});
+			}else if ($(this).prev().attr('id')=="inpCampaignLogDateFilter"){
+				var inpVal3 = $("#inpCampaignLogDateFilter").val(), selectTDNoHighlight3="table tbody td:not(:contains('"+inpVal3+"'))", selectTDHighlight3="table tbody td:contains('"+inpVal3+"')";
+				$('table tbody').closest('table').show().prev('h1.campaignNameHead').show();
+				$(selectTDHighlight3).css({border: "none"});
+				$(selectTDNoHighlight3).css({border: "none"});
+			}
 		}
 	});
 
