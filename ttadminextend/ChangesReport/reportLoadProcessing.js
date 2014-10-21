@@ -6,8 +6,6 @@ var ttTypeWatch = (function(){ /* function to execute a callback, after the user
 	}
 })();
 
-
-
 //Load jQuery UI
 $('<link/>', {
 	rel: 'stylesheet',
