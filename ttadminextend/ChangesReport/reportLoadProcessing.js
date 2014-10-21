@@ -286,6 +286,26 @@ setTimeout(function(){
 
 	$("#inpCampaignLogNameFilter").live("change", function(e) {
 
+		//Clear other filters
+		$('#inpCampaignIDNameFilter').val('');
+		var inpVal1 = $("#inpCampaignIDNameFilter").val(),	selectHide2="h1.campaignNameHead:not(:contains('"+inpVal1+"'))", selectShow2="h1.campaignNameHead:contains('"+inpVal1+"')";
+		$('h1.campaignNameHead').show().next('table').show();
+		$(selectShow2).css({border: "none"});
+		$(selectHide2).css({border: "none"});
+
+		$('#inpCampaignLogFilter').val('');
+		var inpVal2 = $("#inpCampaignLogFilter").val(),	selectTDNoHighlight2="table tbody td:not(:contains('"+inpVal2+"'))", selectTDHighlight2="table tbody td:contains('"+inpVal2+"')";
+		$('table tbody').closest('table').show().prev('h1.campaignNameHead').show();
+		$(selectTDHighlight2).css({border: "none"});
+		$(selectTDNoHighlight2).css({border: "none"});
+
+		$('#inpCampaignLogDateFilter').val('');
+		var inpVal3 = $("#inpCampaignLogDateFilter").val(), selectTDNoHighlight3="table tbody td:not(:contains('"+inpVal3+"'))", selectTDHighlight3="table tbody td:contains('"+inpVal3+"')";
+		$('table tbody').closest('table').show().prev('h1.campaignNameHead').show();
+		$(selectTDHighlight3).css({border: "none"});
+		$(selectTDNoHighlight3).css({border: "none"});
+
+
 		var inpVal4 = $("#inpCampaignLogNameFilter option:selected").val(),
 			selectHide="table tbody:not(:contains('"+inpVal4+"'))", selectTDNoHighlight="table tbody td:not(:contains('"+inpVal4+"'))", selectShow="table tbody:contains('"+inpVal4+"')", selectTDHighlight="table tbody td:contains('"+inpVal4+"')";
 
