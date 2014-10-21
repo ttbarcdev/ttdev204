@@ -445,7 +445,7 @@ function ttSelectText(element) {
                                     if (zipDateStDD<10){zipDateStDD="0"+zipDateStDD};
                                     //zipDateSt = zipDateStYY + zipDateStMM + zipDateStDD;
 									var ttD = new Date();
-									zipDateSt = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate() + "_" + ttD.getHours() + ttD.getMinutes();
+									zipDateSt = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate();
 
                                     var ttOffersBackupZipContent = ttOffersBackupZip.generate({compression: "DEFLATE", type: "blob"});
                                     saveAs(ttOffersBackupZipContent, zipDateSt + "_" + ttHelperOffersListArr.length + "_OffersBackup_part_"+(ajaxArrSplitPart++)+".zip");
@@ -528,7 +528,7 @@ function ttSelectText(element) {
                     if (zipDateStDD<10){zipDateStDD="0"+zipDateStDD};
                     //zipDateSt = zipDateStYY + zipDateStMM + zipDateStDD;
 					var ttD = new Date();
-					zipDateSt = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate() + "_" + ttD.getHours() + ttD.getMinutes();
+					zipDateSt = (ttD.getFullYear()*100 + ttD.getMonth()+1)*100 + ttD.getDate();
 
                     var ttOffersBackupZipContent = ttOffersBackupZip.generate({compression: "DEFLATE", type: "blob"});
                     saveAs(ttOffersBackupZipContent, zipDateSt + "_" + ttHelperOffersListArr.length + "_OffersBackup_part_"+(ajaxArrSplitPart)+".zip");
