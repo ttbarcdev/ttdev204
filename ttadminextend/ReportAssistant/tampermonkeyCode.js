@@ -94,7 +94,7 @@ function ttReportSaveArrayFromIDE(){
 
 function ttReportAssistProcess(){
 	if ($j('#ttAddToReportProcessList').length==0){
-		$j('<div id="ttAddToReportProcessList" style="cursor: pointer;display: inline-block;position: relative;top: 13px;color: #5B91FF;" title="T&T Process My Report List">@R</div>').insertAfter('.cui header.top .crumbs');
+		$j('<div id="ttAddToReportProcessList" style="cursor: pointer;display: inline-block;position: relative;top: 13px;color: #5B91FF; margin-left: 20px;" title="T&T Process My Report List">@R</div>').insertAfter('.cui header.top .crumbs');
 	}
 	$j(document).on('click','#ttAddToReportProcessList',function(){
 		$j('#ttReportProcessIDE').toggle();
