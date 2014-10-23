@@ -623,11 +623,11 @@ $j(function(){
 
 	if ($j('#ttReportProcessIDE').length==0){
 		var ttReportProcessIDEDate = new Date();
-		ttReportProcessIDEDate.setDate(ttReportProcessIDEDate.getDate() - 7);
-		var ttReportProcessIDEDateMin7 = ttReportProcessIDEDate.getDate()+'/'+ (ttReportProcessIDEDate.getMonth()+1) +'/'+ttReportProcessIDEDate.getFullYear();
-		ttReportProcessIDEDate.setDate(ttReportProcessIDEDate.getDate() + 6);
+		ttReportProcessIDEDate.setDate(ttReportProcessIDEDate.getDate() - 9); //9 Days ago, if Report done on Monday will be previous to last Saturday
+		var ttReportProcessIDEDateFrom = ttReportProcessIDEDate.getDate()+'/'+ (ttReportProcessIDEDate.getMonth()+1) +'/'+ttReportProcessIDEDate.getFullYear();
+		ttReportProcessIDEDate.setDate(ttReportProcessIDEDate.getDate() + 6); //3 days ago, if Report done on Monday will be last Friday
 
-		var ttReportProcessIDEDateMin1 = ttReportProcessIDEDate.getDate()+'/'+ (ttReportProcessIDEDate.getMonth()+1) +'/'+ttReportProcessIDEDate.getFullYear();
+		var ttReportProcessIDEDateTo = ttReportProcessIDEDate.getDate()+'/'+ (ttReportProcessIDEDate.getMonth()+1) +'/'+ttReportProcessIDEDate.getFullYear();
 		$j('.cui header.top').closest('div').append('<div id="ttReportProcessIDE" style="display: none; position: relative; margin-top: 0; margin-bottom: 20px; border: 2px ridge #F2F4F7; min-height: 100px; max-height: 185px; overflow: auto;">'+
 
 			'<div id="reportForm">'+
@@ -637,9 +637,9 @@ $j(function(){
 			'	<fieldset class="fldsDates" style="position: absolute; top: 0; right: 10px;">'+
 			'    <div class="fromTo">'+
 			'    <label style="padding-right: 10px;">From:</label>'+
-			'    <input type="text" value="'+ttReportProcessIDEDateMin7+'" id="fromDDMMYY" />'+
+			'    <input type="text" value="'+ttReportProcessIDEDateFrom+'" id="fromDDMMYY" />'+
 			'    <label style="padding-left:5px; padding-right: 5px;">To:</label>'+
-			'    <input type="text" value="'+ttReportProcessIDEDateMin1+'" id="toDDMMYY" />'+
+			'    <input type="text" value="'+ttReportProcessIDEDateTo+'" id="toDDMMYY" />'+
 			'   </fieldset>    '+
 			'	<fieldset class="fldsButtons" style="position: absolute;top: 50px;right: 10px;">'+
 			'    <div id="ttReportProcessIDEProgressIco" style="position: absolute;top: -40px;right: 0px; width: 444px; display: none;" ><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" style="width: 32px; height: 32px;" /></div>'+
