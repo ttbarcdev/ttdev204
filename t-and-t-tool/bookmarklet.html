@@ -1,10 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>T&T Tools Bookmarklet</title>
-</head>
-<body>
-<a href="javascript:(function(){$(function(){var ttRandCacheBuster=parseInt(Math.random()*99999999);if($('.ttHighLLabelWrap').length&gt;0){alert(&quot;Page needs to be refreshed before using the T&amp;T Tools again. Press OK to proceed with refresh. After page is reloaded, use the tool again.&quot;);window.location=location.protocol+'//'+location.host+location.pathname;}function isMyTTToolLoaded(){scripts=document.getElementsByTagName('script');for(var i=scripts.length;i--;){if(scripts[i].src==&quot;https://ttdev204.googlecode.com/svn/t-and-t-tool/t-and-t-tool.js?cb=&quot;+ttRandCacheBuster)return true;}return false;}if(isMyTTToolLoaded()===false){c=document.createElement(&quot;script&quot;);c.type=&quot;text/javascript&quot;;c.src=&quot;https://ttdev204.googlecode.com/svn/t-and-t-tool/t-and-t-tool.js?cb=&quot;+ttRandCacheBuster;c.onload=c.onreadystatechange=function(){if(!b&amp;&amp;(!(d=this.readyState)||d==&quot;loaded&quot;||d==&quot;complete&quot;)){h(b=1);f(c).remove()}};document.documentElement.childNodes[0].appendChild(c);}});})();" id="codeOut">T&amp;T Tools</a>
-</body>
-</html>
+http://jsbin.com/hibesi/latest/quiet
