@@ -484,7 +484,7 @@ var EditArea_offertemplates= {
 									preftbSurlLogoutPersonalPremierFSSURL=='' ||
 									preftbSurlLogoutPersonalPremierFSProp74 == ''
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
@@ -531,7 +531,7 @@ var EditArea_offertemplates= {
 									preftbSurlLogoutBusinessFSSURL=='' ||
 									preftbSurlLogoutBusinessFSProp74 == ''
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
@@ -585,7 +585,7 @@ var EditArea_offertemplates= {
 									ftbProductPromoCarouselNoRHSFS_MainCTACopy=='' ||
 									ftbProductPromoCarouselNoRHSFS_MainCTAURL == ''
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
@@ -635,7 +635,7 @@ var EditArea_offertemplates= {
 									ftbProductPromoCarouselWithRHSFS_MainCTACopy=='' ||
 									ftbProductPromoCarouselWithRHSFS_MainCTAURL == ''
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
@@ -698,7 +698,7 @@ var EditArea_offertemplates= {
 										ftbGhostAccountFSSideBul3Headline=='' ||
 										ftbGhostAccountFSSideBul3Supline==''
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
@@ -787,7 +787,7 @@ var EditArea_offertemplates= {
 									ftbGhostAccountSmartSpendFSSidePartnerCTAURL==''
 	
 									){
-									alert('Please provide information for all fields!');
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
 									break;
 								}else{
 
