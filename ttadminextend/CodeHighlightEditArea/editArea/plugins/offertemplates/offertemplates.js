@@ -769,7 +769,7 @@ var EditArea_offertemplates= {
 									ftbGhostAccountSmartSpendFSSidePartnerImageURL = $('#ftbGhostAccountSmartSpendFSSidePartnerImageURL').val(),
 									ftbGhostAccountSmartSpendFSSidePartnerImageALT = $('#ftbGhostAccountSmartSpendFSSidePartnerImageALT').val(),
 									ftbGhostAccountSmartSpendFSSidePartnerCopy = $('#ftbGhostAccountSmartSpendFSSidePartnerCopy').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSidePartnerCTACopy = $('#ftbGhostAccountSmartSpendFSSidePartnerCTACopy').replace(/£/g,'&pound;'),
+									ftbGhostAccountSmartSpendFSSidePartnerCTACopy = $('#ftbGhostAccountSmartSpendFSSidePartnerCTACopy').val().replace(/£/g,'&pound;'),
 									ftbGhostAccountSmartSpendFSSidePartnerCTAURL = $('#ftbGhostAccountSmartSpendFSSidePartnerCTAURL').val(),									
 									ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget = $('#ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget').val();
 
