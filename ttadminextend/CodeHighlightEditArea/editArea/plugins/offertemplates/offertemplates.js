@@ -371,7 +371,7 @@ var EditArea_offertemplates= {
 						'<fieldset class="ftbGhostAccountSmartSpendFS ttOfferPatternInputs">' +
 
 						'<label for="ftbGhostAccountSmartSpendFSMainHeadline" style="width: 85px;">Main Headline Copy</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainHeadline" placeholder="example: Start saving for the future" style="width: 190px;" />' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainHeadline" placeholder="example: My rewards" style="width: 190px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbGhostAccountSmartSpendFSMainHeadlineURL" style="width: 85px;">Main Headline URL</label>' +
@@ -384,11 +384,11 @@ var EditArea_offertemplates= {
 						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
 
 						'<label for="ftbGhostAccountSmartSpendFSMainCopy" style="width: 85px; margin-top: 12px;" class="ttclr">Main Copy</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainCopy" placeholder="example: Open a savings account in just a few clicks and save regularly." style="width: 360px;" />' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainCopy" placeholder="example: Explore our exclusive partnerships with select brands to earn cashback and save money." style="width: 360px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbGhostAccountSmartSpendFSMainCTACopy" style="width: 65px;">Main CTA Copy</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainCTACopy" placeholder="example: Apply now" style="width: 200px;" />' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSMainCTACopy" placeholder="example: Start earning rewards" style="width: 200px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbGhostAccountSmartSpendFSMainCTAURL" style="width: 85px; margin-top: 12px;" class="ttclr">Main CTA URL</label>' +
@@ -402,29 +402,32 @@ var EditArea_offertemplates= {
 
 						'<div style="padding-top: 10px;	float: left;clear: both; margin-top: 15px;border-top: 1px dotted #ccc;">'+
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul1Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (1)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul1Headline" placeholder="example: We have a choice of accounts" style="width: 270px;" />' +
+
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageURL" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">SmartSpend RHS Partner Image URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageURL" placeholder="example: /img/logos/barclays-premier.png" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul1Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (1)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul1Supline" placeholder="example: ISAs, Instant access, bonds" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageALT" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner Image ALT</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageALT" placeholder="example: ClicThat" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul2Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (2)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul2Headline" placeholder="example: Access your cash how you want" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCopy" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCopy" placeholder="example: Beat high street prices on lots of quality brands." style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul2Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (2)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul2Supline" placeholder="example: Withdraw it easily or lock it away" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner CTA Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" placeholder="example: Shop" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul3Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (3)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul3Headline" placeholder="example: Competitive interest rates" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner CTA URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSideBul3Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (3)</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSideBul3Supline" placeholder="example: Get your best rate of return" style="width: 270px;" />' +
-						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" style="width: 85px; font-style: italic;" class="ttclr">SmartSpend RHS Partner CTA URL Target</label>' +
+						'<input type="text" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+
 
 						'</div>'+
 
@@ -763,12 +766,13 @@ var EditArea_offertemplates= {
 									ftbGhostAccountSmartSpendFSMainCTACopy = $('#ftbGhostAccountSmartSpendFSMainCTACopy').val().replace(/£/g,'&pound;'),
 									ftbGhostAccountSmartSpendFSMainCTAURL = $('#ftbGhostAccountSmartSpendFSMainCTAURL').val(),
 									ftbGhostAccountSmartSpendFSMainCTATarget = $('#ftbGhostAccountSmartSpendFSMainCTATarget').val(),
-									ftbGhostAccountSmartSpendFSSideBul1Headline = $('#ftbGhostAccountSmartSpendFSSideBul1Headline').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSideBul1Supline = $('#ftbGhostAccountSmartSpendFSSideBul1Supline').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSideBul2Headline = $('#ftbGhostAccountSmartSpendFSSideBul2Headline').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSideBul2Supline = $('#ftbGhostAccountSmartSpendFSSideBul2Supline').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSideBul3Headline = $('#ftbGhostAccountSmartSpendFSSideBul3Headline').val().replace(/£/g,'&pound;'),
-									ftbGhostAccountSmartSpendFSSideBul3Supline = $('#ftbGhostAccountSmartSpendFSSideBul3Supline').val().replace(/£/g,'&pound;');
+									ftbGhostAccountSmartSpendFSSidePartnerImageURL = $('#ftbGhostAccountSmartSpendFSSidePartnerImageURL').val(),
+									ftbGhostAccountSmartSpendFSSidePartnerImageALT = $('#ftbGhostAccountSmartSpendFSSidePartnerImageALT').val(),
+									ftbGhostAccountSmartSpendFSSidePartnerCopy = $('#ftbGhostAccountSmartSpendFSSidePartnerCopy').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountSmartSpendFSSidePartnerCTACopy = $('#ftbGhostAccountSmartSpendFSSidePartnerCTACopy').replace(/£/g,'&pound;'),
+									ftbGhostAccountSmartSpendFSSidePartnerCTAURL = $('#ftbGhostAccountSmartSpendFSSidePartnerCTAURL').val(),									
+									ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget = $('#ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget').val();
+
 
 								if (
 									ftbGhostAccountSmartSpendFSMainHeadline=='' ||
@@ -776,12 +780,12 @@ var EditArea_offertemplates= {
 									ftbGhostAccountSmartSpendFSMainCopy=='' ||
 									ftbGhostAccountSmartSpendFSMainCTACopy=='' ||
 									ftbGhostAccountSmartSpendFSMainCTAURL=='' ||
-									ftbGhostAccountSmartSpendFSSideBul1Headline=='' ||
-									ftbGhostAccountSmartSpendFSSideBul1Supline=='' ||
-									ftbGhostAccountSmartSpendFSSideBul2Headline=='' ||
-									ftbGhostAccountSmartSpendFSSideBul2Supline=='' ||
-									ftbGhostAccountSmartSpendFSSideBul3Headline=='' ||
-									ftbGhostAccountSmartSpendFSSideBul3Supline==''
+									ftbGhostAccountSmartSpendFSSidePartnerImageURL=='' ||
+									ftbGhostAccountSmartSpendFSSidePartnerImageALT=='' ||
+									ftbGhostAccountSmartSpendFSSidePartnerCopy=='' ||
+									ftbGhostAccountSmartSpendFSSidePartnerCTACopy=='' ||
+									ftbGhostAccountSmartSpendFSSidePartnerCTAURL==''
+	
 									){
 									alert('Please provide information for all fields!');
 									break;
@@ -795,8 +799,12 @@ var EditArea_offertemplates= {
 										ftbGhostAccountSmartSpendFSMainCTATarget=" target=\""+ftbGhostAccountSmartSpendFSMainCTATarget+"\"";
 									}
 
+									if (ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget!=''){
+										ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget=" target=\""+ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget+"\"";
+									}
 
-									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecGhostAccount\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecGhostAccountSmartSpend\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
 										"\n\t\x3Cul class=\"ttGAWrap\"\x3E" +
 										"\n\t\t\x3Cli class=\"ttGAMain\"\x3E" +
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
@@ -807,28 +815,23 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
 										"\n\t\t\t\t\x3Cp\x3E" +
-										"\n\t\t\t\t\t"+ftbGhostAccountSmartSpendFSMainCopy+" \x3Ca href=\""+ftbGhostAccountSmartSpendFSMainCTAURL+"\""+ftbGhostAccountSmartSpendFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountSmartSpendFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
+										"\n\t\t\t\t\t"+ftbGhostAccountSmartSpendFSMainCopy+
+										"\n\t\t\t\t\x3C\x2Fp\x3E" +
+										"\n\t\t\t\t\x3Cp class=\"ttMainCopyCTAPar\"\x3E" +
+										"\n\t\t\t\t\t\x3Ca href=\""+ftbGhostAccountSmartSpendFSMainCTAURL+"\""+ftbGhostAccountSmartSpendFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountSmartSpendFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
 										"\n\t\t\t\t\x3C\x2Fp\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
 										"\n\t\t\x3Cli class=\"ttGASide\"\x3E" +
-										"\n\t\t\t\x3Cul class=\"ttGASideList\"\x3E" +
-										"\n\t\t\t\t\x3Cli\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul1Headline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul1Supline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\x3C\x2Fli\x3E" +
-										"\n\t\t\t\t\x3Cli\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul2Headline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul2Supline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\x3C\x2Fli\x3E" +
-										"\n\t\t\t\t\x3Cli\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul3Headline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountSmartSpendFSSideBul3Supline+"\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\x3C\x2Fli\x3E" +
-										"\n\t\t\t\x3C\x2Ful\x3E" +
+										"\n\t\t\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\t\t\x3Cimg src=\""+ftbGhostAccountSmartSpendFSSidePartnerImageURL+"\" alt=\""+ftbGhostAccountSmartSpendFSSidePartnerImageALT+"\" \x2F\x3E" +
+										"\n\t\t\t\t\x3Cp\x3E"+ftbGhostAccountSmartSpendFSSidePartnerCopy+" \x3Ca href=\""+ftbGhostAccountSmartSpendFSSidePartnerCTAURL+"\""+ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget+" class=\"ttMainCTA\"\x3E"+ftbGhostAccountSmartSpendFSSidePartnerCTACopy+"\x3C\x2Fa\x3E\x3C\x2Fp\x3E" +
+										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
 										"\n\t\x3C\x2Ful\x3E" +
 										"\n\x3C\x2Fdiv\x3E";
+
+
 
 									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
 									window.focus();
