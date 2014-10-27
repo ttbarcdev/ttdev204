@@ -96,8 +96,8 @@ function fnTTMboxLoadCustom(mbxName){
 				//we have mbox data stored
 			}			
 		}
-	});	
-	
+	});
+
 	$("html > body").append('<div id="ttCustomMboxHTMLOverlay">&nbsp;</div><div id="ttCustomMboxHTMLWrap"><div id="ttCustomMboxHTMLTitle"><span class="tt-title">Offer HTML Edit <sup style="color: yellow;">beta</sup></span><button class="tt-title-close-btn" role="button" title="close"><span class="tt-closethick"></span><span class="tt-title-close-text">close</span></button></div><div id="ttCustomMboxHTMLContent"><div class="ttIntro">Please paste or edit the Offer\'s HTML below, and click the Apply button. Note that the prepopulated HTML below is a \'close\' but not necessarily  exact match of the offer\'s HTML. This is due to many factors, mainly because it reflects the generated HTML not the source one, and as such may have been affected by other scripts and/or by having dynamic data loaded (S-snippets, etc). Ideally if you have the actual offer\'s HTML you can paste it here, after using the Clear button. Or if you want to just play with what\'s loaded, feel free to just edit.</div><textarea placeholder="Custom HTML goes here. Type/Paste to clear this placeholder text...">'+exstHTML+'</textarea><button type="button" id="ttCustomMboxHTMLApplyBtn">Apply</button><button type="button" id="ttCustomMboxHTMLClearBtn">Clear</button></div></div>');
 	
 	//Dialog Style 
@@ -284,7 +284,7 @@ function fnTTMboxLoadCustom(mbxName){
 				});
 				
 				//Add tool buttons
-				ttHighLightData+='<div class="ttHighlToolBtnWrap"><div style="font-size: 11px; color: #00aeef; font-weight: bold; margin-bottom: 10px;">All of the below buttons will close this dialog and refresh the page, in addition to their own action:</div>'; //open
+				ttHighLightData+='<div class="ttHighlToolBtnWrap"><div style="font-size: 11px; color: #00aeef; font-weight: bold; margin-bottom: 10px; margin-top: 20px;">All of the below buttons will close this dialog and refresh the page, in addition to their own action:</div>'; //open
 				ttHighLightData+='<a class="ttHighlToolBtn" id="ttHighlToolBtnRefreshPage" title="Refresh current page - removing T&T Tools highlights, compare frames, etc">Refresh Page</a>';
 				ttHighLightData+='<a class="ttHighlToolBtn" id="ttHighlToolBtnDeleteTTCookie" title="This would delete mbox and mboxPC cookies, allowing you to use different ttqa parameter on the page">Delete T&amp;T Cookies</a>';
 				ttHighLightData+='<a class="ttHighlToolBtn" id="ttHighlToolBtnForceDefault" title="Adds ?mboxDisable=1 to the URL to disable T&T, even Global_Mbox is disabled, i.e. switches to default. To remove, just take out ?mboxDisable=1 from the URL!">Force Default</a>';
@@ -297,11 +297,12 @@ function fnTTMboxLoadCustom(mbxName){
 			}
 			
 			
-			$('#ttHighlDialContent').html('<p>'+ttHighLightData+'</p>');
+			$('#ttHighlDialContent').html('<p class="ttHighlDialContentPWrap">'+ttHighLightData+'</p>');
 						
 					/* Style dialog */	
 					
 					$('#ttHighlDialContent .tthighlIntro').css({color: '#00aeef', fontSize: '11px', display: 'block', marginBottom: '10px'});
+					$('#ttHighlDialContent p.ttHighlDialContentPWrap').css({overflow: "scroll",	height: "auto", maxHeight: "400px"});
 					$('#ttHighlDialContent p b').css({color: '#00aeef', lineHeight: "1.7", fontSize: '11px', textDecoration: 'none'});
 					$('#ttHighlDialContent p b.note').css({color: '#CC0000', textDecoration: 'none'});
 					$('#ttHighlDialContent p i').css({color: '#00CC00', lineHeight: "1.7", fontSize: '11px', textDecoration: 'none'});
