@@ -403,30 +403,30 @@ var EditArea_offertemplates= {
 						'<div style="padding-top: 10px;	float: left;clear: both; margin-top: 15px;border-top: 1px dotted #ccc;">'+
 
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageURL" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">SmartSpend RHS Partner Image URL</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageURL" placeholder="example: /img/logos/barclays-premier.png" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageURL" style="width: 115px;font-size: 10px;margin-top: 6px;" class="ttclr">SmartSpend RHS Partner Image URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageURL" placeholder="example: /img/logos/barclays-premier.png" style="width: 330px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageALT" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner Image ALT</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageALT" placeholder="example: ClicThat" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerImageALT" style="width: 115px;font-size: 10px;margin-top: 6px;">SmartSpend RHS Partner Image ALT</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerImageALT" placeholder="example: ClicThat" style="width: 150px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCopy" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner Copy</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCopy" placeholder="example: Beat high street prices on lots of quality brands." style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCopy" style="width: 115px;font-size: 10px;margin-top: 6px;" class="ttclr">SmartSpend RHS Partner Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCopy" placeholder="example: Beat high street prices on lots of quality brands." style="width: 330px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner CTA Copy</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" placeholder="example: Shop" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" style="width: 115px;font-size: 10px;margin-top: 6px;" >SmartSpend RHS Partner CTA Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTACopy" placeholder="example: Shop" style="width: 150px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" style="width: 85px;font-size: 10px;margin-top: 12px;">SmartSpend RHS Partner CTA URL</label>' +
-						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 270px;" />' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" style="width: 115px;font-size: 10px;margin-top: 6px;" class="ttclr">SmartSpend RHS Partner CTA URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 330px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" style="width: 85px; font-style: italic;" class="ttclr">SmartSpend RHS Partner CTA URL Target</label>' +
+						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" style="width: 115px;font-style: italic;font-size: 9px;margin-top: 7px;">SmartSpend RHS Partner CTA URL Target</label>' +
 						'<input type="text" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
-						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+						'<span style="font-family: verdana;float: left;margin-top: 2px;margin-left: 2px;font-size: 8px;width: 75px;">(Leave empty or type in _blank for new window)</span>'+
 
 
 						'</div>'+
