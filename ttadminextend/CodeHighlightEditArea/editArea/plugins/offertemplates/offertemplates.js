@@ -168,6 +168,7 @@ var EditArea_offertemplates= {
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
+						'<option value="ftbServicesPromoCarousel">FTB ServicesPromoCarousel</option>' +
 						'</select>' +
 						'</fieldset>' +
 
@@ -424,13 +425,51 @@ var EditArea_offertemplates= {
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" style="width: 115px;font-style: italic;font-size: 9px;margin-top: 7px;">SmartSpend RHS Partner CTA URL Target</label>' +
-						'<input type="text" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<input type="text" id="ftbGhostAccountSmartSpendFSSidePartnerCTAURLTarget" placeholder="example: _blank" style="width: 90px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
 						'<span style="font-family: verdana;float: left;margin-top: 2px;margin-left: 2px;font-size: 8px;width: 75px;">(Leave empty or type in _blank for new window)</span>'+
 
 
 						'</div>'+
 
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
+						/* Template Begin */
+
+						'<fieldset class="ftbServicesPromoCarouselFS ttOfferPatternInputs">' +
+
+						'<label for="ftbServicesPromoCarouselFSImgURL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSImgURL" placeholder="example: /OLB/A/Content/Images/1242645341192-serv-promo.png" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSImgALT" style="width: 55px;" class="ttclr">Image ALT</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSImgALT" placeholder="example: Barclays Mobile Banking" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSH3" style="width: 55px;" class="ttclr">Main Title</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSH3" placeholder="example: Barclays Mobile Banking" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSMainCopy" style="width: 55px;" class="ttclr">Main Copy</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCopy" placeholder="example: Free to download, easy to use &mdash; access your accounts using a 5-digit passcode of your choice." style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSMainCTACopy" style="width: 55px;" class="ttclr">Main CTA Copy</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTACopy" placeholder="example: Get the app" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSMainCTAURL" style="width: 55px;" class="ttclr">Main CTA URL</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURL" placeholder="example: http://www.personal.barclays.co.uk/goto/pfs_mobilehub" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbServicesPromoCarouselFSMainCTAURLTarget" style="width: 115px;font-style: italic;font-size: 9px;margin-top: 7px;" class="ttclr">Main CTA URL Target</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURLTarget" placeholder="example: _blank" style="width: 85%;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<input type="button" value="Generate HTML" class="btn" />' +
 
