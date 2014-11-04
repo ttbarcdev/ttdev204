@@ -883,6 +883,62 @@ var EditArea_offertemplates= {
 
 							/* Template End */
 
+							/* Template Begin */
+
+							case 'ftbServicesPromoCarousel':
+
+								var ftbServicesPromoCarouselFSImgURL = $('#ftbServicesPromoCarouselFSImgURL').val(),
+									ftbServicesPromoCarouselFSImgALT = $('#ftbServicesPromoCarouselFSImgALT').val().replace(/£/g,'&pound;'),
+									ftbServicesPromoCarouselFSH3 = $('#ftbServicesPromoCarouselFSH3').val().replace(/£/g,'&pound;'),
+									ftbServicesPromoCarouselFSMainCopy = $('#ftbServicesPromoCarouselFSMainCopy').val().replace(/£/g,'&pound;'),
+									ftbServicesPromoCarouselFSMainCTACopy = $('#ftbServicesPromoCarouselFSMainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbServicesPromoCarouselFSMainCTAURL = $('#ftbServicesPromoCarouselFSMainCTAURL').val(),
+									ftbServicesPromoCarouselFSMainCTAURLTarget = $('#ftbServicesPromoCarouselFSMainCTAURLTarget').val();
+
+
+								if (
+									ftbServicesPromoCarouselFSImgURL=='' ||
+									ftbServicesPromoCarouselFSImgALT=='' ||
+									ftbServicesPromoCarouselFSH3=='' ||
+									ftbServicesPromoCarouselFSMainCopy=='' ||
+									ftbServicesPromoCarouselFSMainCTACopy=='' ||
+									ftbServicesPromoCarouselFSMainCTAURL==''
+
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbServicesPromoCarouselFSMainCTAURLTarget!=''){
+										ftbServicesPromoCarouselFSMainCTAURLTarget=" target=\""+ftbServicesPromoCarouselFSMainCTAURLTarget+"\"";
+									}
+
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecServicesPromoCarousel\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\x3Cp class=\"ttSPCImageWrap\"\x3E" +
+										"\n\t\t\t\x3Cimg src=\""+ftbServicesPromoCarouselFSImgURL+"\" alt=\""+ftbServicesPromoCarouselFSImgALT+"\" height=\"129\" width=\"270\"\x3E" +
+										"\n\t\t\x3C\x2Fp\x3E" +
+										"\n\t\t\x3Ch3\x3E"+ftbServicesPromoCarouselFSH3+"\x3C\x2Fh3\x3E" +
+										"\n\t\t\x3Cdiv class=\"ttSPCMainContent\"\x3E" +
+										"\n\t\t\t" + ftbServicesPromoCarouselFSMainCopy +
+										"\n\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\x3Cp class=\"ttSPCMainCTA\"\x3E" +
+										"\n\t\t\t\x3Ca href=\""+ftbServicesPromoCarouselFSMainCTAURL+"\""+ftbServicesPromoCarouselFSMainCTAURLTarget+" class=\"ttMainCTA\" \x3E"+ftbServicesPromoCarouselFSMainCTACopy+"\x3C\x2Fa\x3E" +
+										"\n\t\t\x3C\x2Fp\x3E" +
+										"\n\t\x3C\x2Fdiv\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+
+								break;
+
+							/* Template End */
+
 							default:
 
 								break;
