@@ -467,10 +467,10 @@ var EditArea_offertemplates= {
 						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURL" placeholder="example: http://www.personal.barclays.co.uk/goto/pfs_mobilehub" style="width: 470px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbServicesPromoCarouselFSMainCTAURLTarget" style="width: 115px;font-style: italic;font-size: 9px;margin-top: 7px;" class="ttclr">Main CTA<br />URL Target</label>' +
-						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURLTarget" placeholder="example: _blank" style="width: 85%;" />' +
+						'<label for="ftbServicesPromoCarouselFSMainCTAURLTarget" style="width: 55px;font-style: italic;font-size: 9px;margin-top: 7px;" class="ttclr">Main CTA<br />URL Target</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURLTarget" placeholder="example: _blank" style="width: 130px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
-						'<span style="font-family: verdana;float: left;margin-top: 2px;margin-left: 2px;font-size: 8px;width: 75px;">(Leave empty or type in _blank for new window)</span>'+
+						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 8px;width: 125px;">(Leave empty or type in _blank for new window)</span>'+
 
 						'<input type="button" value="Generate HTML" class="btn" />' +
 
