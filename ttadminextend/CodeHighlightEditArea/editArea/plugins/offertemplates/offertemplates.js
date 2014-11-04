@@ -452,24 +452,25 @@ var EditArea_offertemplates= {
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbServicesPromoCarouselFSH3" style="width: 55px;" class="ttclr">Main<br />Title</label>' +
-						'<input type="text" value="" id="ftbServicesPromoCarouselFSH3" placeholder="example: Barclays Mobile Banking" style="width: 85%;" />' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSH3" placeholder="example: Barclays Mobile Banking" style="width: 701px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbServicesPromoCarouselFSMainCopy" style="width: 55px;" class="ttclr">Main<br />Copy</label>' +
-						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCopy" placeholder="example: Free to download, easy to use &mdash; access your accounts using a 5-digit passcode of your choice." style="width: 85%;" />' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCopy" placeholder="example: Free to download, easy to use &mdash; access your accounts using a 5-digit passcode of your choice." style="width: 701px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbServicesPromoCarouselFSMainCTACopy" style="width: 55px;" class="ttclr">Main CTA<br />Copy</label>' +
-						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTACopy" placeholder="example: Get the app" style="width: 85%;" />' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTACopy" placeholder="example: Get the app" style="width: 130px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbServicesPromoCarouselFSMainCTAURL" style="width: 55px;" class="ttclr">Main CTA<br />URL</label>' +
-						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURL" placeholder="example: http://www.personal.barclays.co.uk/goto/pfs_mobilehub" style="width: 85%;" />' +
+						'<label for="ftbServicesPromoCarouselFSMainCTAURL" style="width: 55px;">Main CTA<br />URL</label>' +
+						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURL" placeholder="example: http://www.personal.barclays.co.uk/goto/pfs_mobilehub" style="width: 470px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbServicesPromoCarouselFSMainCTAURLTarget" style="width: 115px;font-style: italic;font-size: 9px;margin-top: 7px;" class="ttclr">Main CTA<br />URL Target</label>' +
 						'<input type="text" value="" id="ftbServicesPromoCarouselFSMainCTAURLTarget" placeholder="example: _blank" style="width: 85%;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 2px;margin-left: 2px;font-size: 8px;width: 75px;">(Leave empty or type in _blank for new window)</span>'+
 
 						'<input type="button" value="Generate HTML" class="btn" />' +
 
