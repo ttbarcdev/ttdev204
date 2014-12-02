@@ -24,7 +24,7 @@ $('<style>' +
 	'table tr:nth-child(odd) {background: #FFF;}' +
 	'table tbody tr:nth-child(n+11) {display: none;} /* hide 10+ rows */' +
 	'#inpCampaignIDNameFilter, #inpCampaignLogFilter, #inpCampaignLogDateFilter {width: 680px;padding: 4px 5px;margin-left: 10px; margin-right: 3px;}' +
-	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px; margin-right: 3px;}' +
+	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 5px; margin-right: 3px;}' +
 	'#filterWrap {position: relative;}' +
 	'.filterLabel {font-weight: bold;font-family: verdana;font-size: 11px;width: 200px;display: inline-block; margin-top: 15px;}' +
 	'.ui-datepicker th {font-size: 15px;}' +
