@@ -59,7 +59,7 @@ $(function() {
 	if (!jQuery.support.leadingWhitespace) {
 		$('table tr:nth-child(even)').css({background: '#D6DEE2'});
 		$('table tr:nth-child(odd)').css({background: '#FFF'});
-		$('table tbody tr:nth-child(n+10)').css({display: 'none'});
+		$('table tbody tr:nth-child(n+11)').css({display: 'none'});
 		/* hide 10+ rows */
 	}
 
@@ -73,7 +73,7 @@ $(function() {
 
 	$("a.showAllCTA:contains('hide')").live("click",function(e){
 		e.preventDefault();
-		$(this).closest("table").find("tbody tr:nth-child(n+10)").hide();
+		$(this).closest("table").find("tbody tr:nth-child(n+11)").hide();
 		$(this).html("here to show all rows");
 		return false;
 	});
