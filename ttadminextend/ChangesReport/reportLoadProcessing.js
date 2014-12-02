@@ -22,7 +22,7 @@ $('<style>' +
 	'table td {padding: 10px;}' +
 	'table tr:nth-child(even) {background: #D6DEE2;}' +
 	'table tr:nth-child(odd) {background: #FFF;}' +
-	'table tbody tr:nth-child(n+10) {display: none;} /* hide 10+ rows */' +
+	'table tbody tr:nth-child(n+11) {display: none;} /* hide 10+ rows */' +
 	'#inpCampaignIDNameFilter, #inpCampaignLogFilter, #inpCampaignLogDateFilter {width: 680px;padding: 4px 5px;margin-left: 10px; margin-right: 3px;}' +
 	'#inpCampaignLogNameFilter {width: auto;padding: 4px 5px;margin-left: 10px; margin-right: 3px;}' +
 	'#filterWrap {position: relative;}' +
