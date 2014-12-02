@@ -80,7 +80,7 @@ $(function() {
 
 	//Check whether Tables have more than 10 rows in the tbody, remove the show/hide links for those
 	$('table tbody').each(function(){
-		if ($(this).find('tr').length <=11){
+		if ($(this).find('tr').length <=10){
 			$(this).closest('table').find('div.showAllWrap').remove();
 		}
 	});
