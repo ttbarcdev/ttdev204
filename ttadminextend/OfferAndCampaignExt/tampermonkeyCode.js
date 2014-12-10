@@ -37,6 +37,12 @@ function ttDynLoadLib(liburl) {
 	}
 }
 
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jStorage.js');
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/jszip.js');
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/FileSaver.js');
+ttDynLoadLib('https://ttdev204.googlecode.com/svn/common/getUrlPar.js');
+
+
 function ttOfferListInsert(){
 	ttDynLoadLib('https://ttdev204.googlecode.com/svn/ttadminextend/OfferAndCampaignExt/ttOffersListHelper.js');
 }
