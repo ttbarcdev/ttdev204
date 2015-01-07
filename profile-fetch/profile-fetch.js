@@ -280,17 +280,7 @@ if (typeof jQuery == 'undefined') {
 
 		} else {
 
-			if (thisPageUsingOtherJSLibrary) {
-
-				ttProfileFetch();
-
-			} else {
-
-				// Use .noConflict(), then run your jQuery Code
-				var $ = jQuery.noConflict();
-				ttProfileFetch();
-
-			}
+			ttProfileFetch();
 
 		}
 
