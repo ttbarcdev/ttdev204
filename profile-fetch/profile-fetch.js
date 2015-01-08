@@ -6,6 +6,8 @@ var ttTypeWatch = (function(){ /* function to execute a callback, after the user
 	}
 })();
 
+function cookieRead(k){return(document.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+
 var transforms = {
 	'object':{'tag':'div','class':'package ${show} ${type}','children':[
 		{'tag':'div','class':'header','children':[
@@ -139,28 +141,58 @@ function regEvents() {
 
 function ttProfileFetch(){
 
-	//jQuery Case Insensitive contains
-	$.expr[":"].contains = $.expr.createPseudo(function(arg) {
-		return function( elem ) {
-			return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-		};
-	});
-
 	$.getScript('https://ttdev204.googlecode.com/svn/common/jquery.json2html.js');
 	$.getScript('https://ttdev204.googlecode.com/svn/common/json2html.js');
 
-	$('html').html('<form style="padding: 30px;border: 1px solid rgb(20, 111, 158);width: 90%;margin: 20px;" id="ttPF_form">' +
-		'<label for="ttPF_MembID">Please provide Membership ID for Profile to be fetched</label>' +
-		'<input type="text" id="ttPF_MembID" name="ttPF_MembID" style="display:block; margin-top: 10px; width: 350px;" />' +
-		'<input type="submit" value="Profile Fetch" id="ttPF_CTA" style="display: block; margin-top: 10px;" /> ' +
-		'<p id="ttPF_RAWText" style="display: none; margin-top: 20px;">RAW Profile (select all, and copy from here)</p>' +
-		'<iframe id="ttPF_Iframe" src="about:blank" style="display: none; width: 100%; height: 150px; border: 1px solid rgb(20, 111, 158); margin-top: 0;"></iframe>' +
-		'<p id="ttPF_ConvertTAText" style="display: none; margin-top: 20px;">Paste here and press [JSON Visualize]</p>' +
-		'<textarea name="ttPF_ConvertTA" id="ttPF_ConvertTA" style="display: none; width: 100%; height: 300px;"></textarea>' +
-		'<div id="ttPF_ConvertTAOutput" style="display: none; margin-top: 10px; width: 100%; height: 300px; overflow: auto;"></div>' +
-		'<input type="button" value="JSON Visualize" id="ttPF_JSONCTA" style="display: none; margin-top: 10px;" /> ' +
-		'<input type="text" placeholder="type here for filter, remove all for no filter" value="" id="ttPF_JSON_Filter" style="display: none; margin-top: 10px;margin-top: 10px;float: right;width: 50%;text-align: right;padding: 2px 10px;" /> ' +
-		'</form>');
+	$('html').empty();
+
+	if (location.host=="barclaysbankplc.tt.omtrdc.net"){
+		$('html').html('<form style="padding: 30px;border: 1px solid rgb(20, 111, 158);width: 90%;margin: 20px; position: relative;" id="ttPF_form">' +
+			'<label for="ttPF_MembID">Please provide Membership ID for Profile to be fetched</label>' +
+			'<input type="text" id="ttPF_MembID" name="ttPF_MembID" style="display:block; margin-top: 10px; width: 350px;" />' +
+			'<input type="submit" value="Profile Fetch" id="ttPF_CTA" style="display: inline-block; margin-top: 10px; float: left;" /> ' +
+			'<div id="ttFetchLoaderIco" style="display: none;width: 20px;height: 20px;float: left;margin-left: 10px;margin-top: 8px;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" style="width: 100%; height: 100%;"></div>' +
+			'<p id="ttPF_RAWText" style="display: none; margin-top: 20px; clear: both; float: left;">RAW Profile</p>' +
+			'<div id="ttPF_RAW" style="display: none; width: 100%; height: 150px; border: 1px solid rgb(20, 111, 158); margin-top: 0; overflow: auto;"></div>' +
+			'<p id="ttPF_ConvertTAText" style="display: none; margin-top: 20px;clear: both; float: left;">Visualized JSON:</p>' +
+			'<textarea name="ttPF_ConvertTA" id="ttPF_ConvertTA" style="display: none; width: 100%; height: 300px;clear: both; float: left;"></textarea>' +
+			'<div id="ttPF_ConvertTAOutput" style="display: none; margin-top: 10px; width: 100%; max-height: 300px; overflow: auto;"></div>' +
+			'<input type="text" placeholder="type here for filter, remove all for no filter" value="" id="ttPF_JSON_Filter" style="display: none; margin-top: 10px;margin-top: 10px;float: right;width: 50%;text-align: right;padding: 2px 10px;" /> ' +
+			'<div style="clear:both;"></div>' +
+			'</form>');
+
+	}else{
+
+		$('html').html('<form style="padding: 30px;border: 1px solid rgb(20, 111, 158);width: 90%;margin: 20px; position: relative;" id="ttPF_form">' +
+			'<label for="ttPF_MembID">Please provide Membership ID for Profile to be fetched</label>' +
+			'<input type="text" id="ttPF_MembID" name="ttPF_MembID" style="display:block; margin-top: 10px; width: 350px;" />' +
+			'<input type="submit" value="Profile Fetch" id="ttPF_CTA" style="display: inline-block; margin-top: 10px; float: left;" /> ' +
+			'<div id="ttFetchLoaderIco" style="display: none;width: 20px;height: 20px;float: left;margin-left: 10px;margin-top: 8px;"><img src="https://ttdev204.googlecode.com/svn/common/img/bs_ajax_loader.gif" style="width: 100%; height: 100%;"></div>' +
+			'<p id="ttPF_RAWText" style="display: none; margin-top: 20px;clear: both; float: left;">RAW Profile (select all, and copy from here)</p>' +
+			'<iframe id="ttPF_Iframe" src="about:blank" style="display: none; width: 100%; height: 150px; border: 1px solid rgb(20, 111, 158); margin-top: 0;"></iframe>' +
+			'<p id="ttPF_ConvertTAText" style="display: none; margin-top: 20px;">Paste here and press [JSON Visualize]</p>' +
+			'<textarea name="ttPF_ConvertTA" id="ttPF_ConvertTA" style="display: none; width: 100%; height: 300px;"></textarea>' +
+			'<div id="ttPF_ConvertTAOutput" style="display: none; margin-top: 10px; width: 100%; height: 300px; overflow: auto;"></div>' +
+			'<input type="button" value="JSON Visualize" id="ttPF_JSONCTA" style="display: none; margin-top: 10px;" /> ' +
+			'<input type="text" placeholder="type here for filter, remove all for no filter" value="" id="ttPF_JSON_Filter" style="display: none; margin-top: 10px;margin-top: 10px;float: right;width: 50%;text-align: right;padding: 2px 10px;" /> ' +
+			'<div style="clear:both;"></div>' +
+			'</form>');
+	}
+
+
+
+	//jQuery Case Insensitive contains
+	$.extend($.expr[':'], {
+		'containsi': function(elem, i, match, array)
+		{
+			return (elem.textContent || elem.innerText || '').toLowerCase()
+				.indexOf((match[3] || "").toLowerCase()) >= 0;
+		}
+	});
+
+	if (typeof cookieRead('membershipID')!="undefined"){
+		$('#ttPF_MembID').val(cookieRead('membershipID'));
+	}
 
 	var ttinshead = document.getElementsByTagName('head')[0];
 	var ttinscss = document.createElement("style");
@@ -184,22 +216,79 @@ function ttProfileFetch(){
 		".hide {display:none;}";
 	ttinshead.appendChild(ttinscss);
 
-	$('#ttPF_form').on('submit',function(){
-		$('#ttPF_Iframe').attr('src','https://barclaysbankplc.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/'+$('#ttPF_MembID').val()+'?client=barclaysbankplc').show();
+	$('#ttPF_form').submit(function(){
+		if (location.host=="barclaysbankplc.tt.omtrdc.net"){
+
+			$.ajax({
+				url: 'https://barclaysbankplc.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/'+$('#ttPF_MembID').val()+'?client=barclaysbankplc',
+				cache: false,
+				timeout: 18000,
+				dataType: 'text',
+				xhrFields: {
+					withCredentials: true
+				}, beforeSend: function () {
+					$('#ttPF_RAW').html('');
+					$('#ttPF_RAW, #ttPF_RAWText').hide();
+					$('#ttFetchLoaderIco').show();
+					$('#ttPF_JSON_Filter').val('');
+				}, success: function (data) {
+					$('#ttFetchLoaderIco').hide();
+					$('#ttPF_RAW').html(data).show();
+					$('#ttPF_RAWText').show();
+					//Get the value from the input field
+					var json_string = data;
+
+					//Parse the json string
+					try
+					{
+						//eval
+						eval("var json=" + json_string);
+						visualize(json);
+					}
+					catch (e)
+					{
+						alert("Sorry error in json string, please correct and try again: " + e.message);
+					}
+				}, error: function (data) {
+					$('#ttFetchLoaderIco').hide();
+					$('#ttPF_RAW').html(data.responseText).show();
+					$('#ttPF_RAWText').show();
+					//Get the value from the input field
+					var json_string = data.responseText;
+
+					//Parse the json string
+					try
+					{
+						//eval
+						eval("var json=" + json_string);
+						visualize(json);
+					}
+					catch (e)
+					{
+						alert("Sorry error in json string, please correct and try again: " + e.message);
+					}
+				}
+			});
+
+
+		}else{
+			$('#ttFetchLoaderIco').show();
+			$('#ttPF_Iframe').attr('src','https://barclaysbankplc.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/'+$('#ttPF_MembID').val()+'?client=barclaysbankplc').show();
+			$('#ttPF_RAWText, #ttPF_ConvertTAText, #ttPF_JSONCTA, #ttPF_ConvertTA').show();
+		}
 		$('#ttPF_ConvertTA, #ttPF_RAWText, #ttPF_ConvertTAText, #ttPF_ConvertTAOutput').val('');
-		$('#ttPF_RAWText, #ttPF_ConvertTAText, #ttPF_JSONCTA, #ttPF_ConvertTA').show();
 		$('#ttPF_ConvertTAOutput, #ttPF_JSON_Filter').hide();
 
 		return false;
 	});
 
-	$("#ttPF_JSON_Filter").on("keyup", function(e) {
+	$("#ttPF_JSON_Filter").keyup(function(e) {
 
 		// executed only 100 ms after the last keyup event.
 		ttTypeWatch(function () {
 			var inpVal = $("#ttPF_JSON_Filter").val();
 			if (inpVal!=''){
-				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package:not(:contains("'+inpVal+'"))').hide();
+				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package:not(:containsi("'+inpVal+'"))').hide();
 			}else{
 				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package').show();
 			}
@@ -209,7 +298,7 @@ function ttProfileFetch(){
 
 
 
-	$('#ttPF_JSONCTA').on('click',function(){
+	$('#ttPF_JSONCTA').click(function(){
 
 		//Get the value from the input field
 		var json_string = $('#ttPF_ConvertTA').val();
@@ -231,10 +320,12 @@ function ttProfileFetch(){
 
 	});
 
+	$('#ttPF_Iframe').load(function() {
+		$('#ttFetchLoaderIco').hide();
+	});
+
 
 }
-
-
 
 // Only do anything if jQuery isn't defined
 if (typeof jQuery == 'undefined') {
