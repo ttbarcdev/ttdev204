@@ -37,6 +37,7 @@ function visualize(json) {
 	regEvents();
 
 	$('#ttPF_ConvertTAOutput>div>div>div.package:last').removeClass('closed');
+	$('#ttPF_ConvertTAOutput>div.package').css({marginLeft: '0'});
 }
 
 function getValue(obj) {
@@ -194,7 +195,7 @@ function ttProfileFetch(){
 
 	$("#ttPF_JSON_Filter").on("keyup", function(e) {
 
-		// executed only 700 ms after the last keyup event.
+		// executed only 100 ms after the last keyup event.
 		ttTypeWatch(function () {
 			var inpVal = $("#ttPF_JSON_Filter").val();
 			if (inpVal!=''){
@@ -203,7 +204,7 @@ function ttProfileFetch(){
 				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package').show();
 			}
 
-		}, 700);
+		}, 100);
 	});
 
 
