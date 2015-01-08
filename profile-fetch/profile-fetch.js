@@ -172,7 +172,7 @@ function ttProfileFetch(){
 			'<iframe id="ttPF_Iframe" src="about:blank" style="display: none; width: 100%; height: 150px; border: 1px solid rgb(20, 111, 158); margin-top: 0;"></iframe>' +
 			'<p id="ttPF_ConvertTAText" style="display: none; margin-top: 20px;">Paste here and press [JSON Visualize]</p>' +
 			'<textarea name="ttPF_ConvertTA" id="ttPF_ConvertTA" style="display: none; width: 100%; height: 300px;"></textarea>' +
-			'<div id="ttPF_ConvertTAOutput" style="display: none; margin-top: 10px; width: 100%; height: 300px; overflow: auto;"></div>' +
+			'<div id="ttPF_ConvertTAOutput" style="display: none; margin-top: 10px; width: 100%; max-height: 300px; overflow: auto;"></div>' +
 			'<input type="button" value="JSON Visualize" id="ttPF_JSONCTA" style="display: none; margin-top: 10px;" /> ' +
 			'<input type="text" placeholder="type here for filter, remove all for no filter" value="" id="ttPF_JSON_Filter" style="display: none; margin-top: 10px;margin-top: 10px;float: right;width: 50%;text-align: right;padding: 2px 10px;" /> ' +
 			'<div style="clear:both;"></div>' +
@@ -288,11 +288,11 @@ function ttProfileFetch(){
 		ttTypeWatch(function () {
 			var inpVal = $("#ttPF_JSON_Filter").val();
 			if (inpVal!=''){
+				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package').show();
 				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package:not(:containsi("'+inpVal+'"))').hide();
 			}else{
 				$('#ttPF_ConvertTAOutput>div>div>div.package.object>.children>.package').show();
 			}
-
 		}, 100);
 	});
 
