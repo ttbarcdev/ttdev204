@@ -273,7 +273,7 @@ var EditArea_offertemplates= {
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" style="width: 45px;margin-right: 15px;" class="ttclr">Main copy</label>' +
-						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" placeholder=\'example: Upload your favourite photo or choose from our extensive gallery.\' style="width: 375px;" />' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" placeholder=\'example: Upload your favourite photo or choose from our extensive gallery.\' style="width: 715px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy" class="ttclr" style="width:55px;">Main CTA Copy</label>' +
