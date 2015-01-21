@@ -268,11 +268,11 @@ var EditArea_offertemplates= {
 						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_Title" placeholder="example: Personalise your debit card" style="width: 240px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" style="width: 45px;margin-right: 15px;">Title Tooltip copy</label>' +
-						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" placeholder=\'example: Terms and Conditions apply.\' style="width: 375px;" />' +
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" style="width: 65px;margin-right: 15px;">Title Tooltip copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" placeholder=\'example: Terms and Conditions apply.\' style="width: 355px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" style="width: 45px;margin-right: 15px;">Main copy</label>' +
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" style="width: 45px;margin-right: 15px;" class="ttclr">Main copy</label>' +
 						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" placeholder=\'example: Upload your favourite photo or choose from our extensive gallery.\' style="width: 375px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
