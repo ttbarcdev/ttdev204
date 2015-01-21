@@ -165,6 +165,7 @@ var EditArea_offertemplates= {
 						'<option value="preftbSurlLogoutPersonalPremier">Logout Banner (Personal &amp; Premier)</option>' +
 						'<option value="preftbSurlLogoutBusiness">Logout Banner (Business)</option>' +
 						'<option value="ftbProductPromoCarouselNoRHS">FTB ProductPromoCarousel (no RHS info)</option>' +
+						'<option value="ftbProductPromoCarouselNoRHSTitleTooltip">FTB ProductPromoCarousel (no RHS info, Tooltip on Title)</option>' +
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
@@ -249,6 +250,51 @@ var EditArea_offertemplates= {
 						'</fieldset>' +
 
 						/* Template End */
+
+						/* Template Begin */
+
+
+						'<fieldset class="ftbProductPromoCarouselNoRHSTitleTooltipFS ttOfferPatternInputs">' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL" placeholder="example: /OLB/A/Content/Images/1242645340532-globe-icon.png" style="width: 440px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT" style="width: 40px;">Image ALT</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT" placeholder="example: Global promo" style="width: 190px;"  />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_Title" class="ttclr" style="width: 55px;">Title</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_Title" placeholder="example: Personalise your debit card" style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" style="width: 45px;margin-right: 15px;">Title Tooltip copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy" placeholder=\'example: Terms and Conditions apply.\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" style="width: 45px;margin-right: 15px;">Main copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy" placeholder=\'example: Upload your favourite photo or choose from our extensive gallery.\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy" class="ttclr" style="width:55px;">Main CTA Copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy" placeholder=\'example: Get card\' style="width:240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL" style="width:55px;">Main CTA URL</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL" placeholder=\'example: /olb/balances/PersonalFinancialSummary.action\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget" style="width: 55px; font-style: italic;">Main CTA Target</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget" placeholder=\'example: _blank\' style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 12px;margin-left: 5px;font-size: 10px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
 
 						/* Template Begin */
 
@@ -640,6 +686,51 @@ var EditArea_offertemplates= {
 										"\n\t\t\x3Cimg src=\""+ftbProductPromoCarouselNoRHSFS_Image_URL+"\" alt=\""+ftbProductPromoCarouselNoRHSFS_Image_ALT+"\" height=\"34\" width=\"34\"\x3E" +
 										"\n\t\t\x3Ch3\x3E"+ftbProductPromoCarouselNoRHSFS_Title+"\x3C\x2Fh3\x3E" +
 										"\n\t\t" +ftbProductPromoCarouselNoRHSFS_MainCopyCombined+
+										"\n\t\x3C\x2Fdiv\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+								break;
+							/* Template End */
+
+							/* Template Begin */
+							case 'ftbProductPromoCarouselNoRHSTitleTooltip':
+
+								var ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL').val(),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT').val(),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_Title = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Title').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL').val(),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget').val();
+
+								if (
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_Title=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL == ''
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget!=''){
+										ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget=" target=\""+ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget+"\"";
+									}
+
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopyCombined="<p>"+ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy+" <a href=\""+ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL+"\""+ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget+" class=\"ttMainCTA\">"+ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy+"</a></p>";
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecProdPromoCarousel\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\x3Cimg src=\""+ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL+"\" alt=\""+ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT+"\" height=\"34\" width=\"34\"\x3E" +
+										"\n\t\t\x3Ch3\x3E"+ftbProductPromoCarouselNoRHSTitleTooltipFS_Title+" \x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fh3\x3E" +
+										"\n\t\t" +ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopyCombined+
 										"\n\t\x3C\x2Fdiv\x3E" +
 										"\n\x3C\x2Fdiv\x3E";
 
