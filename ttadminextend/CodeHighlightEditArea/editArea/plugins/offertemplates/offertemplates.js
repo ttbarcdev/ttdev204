@@ -703,6 +703,7 @@ var EditArea_offertemplates= {
 								var ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL').val(),
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT').val(),
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_Title = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_Title').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy').val().replace(/£/g,'&pound;'),
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy').val().replace(/£/g,'&pound;'),
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy').val().replace(/£/g,'&pound;'),
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL = $('#ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL').val(),
@@ -712,6 +713,7 @@ var EditArea_offertemplates= {
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_URL=='' ||
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_Image_ALT=='' ||
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_Title=='' ||
+									ftbProductPromoCarouselNoRHSTitleTooltipFS_TooltipCopy=='' ||
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCopy=='' ||
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTACopy=='' ||
 									ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTAURL == ''
