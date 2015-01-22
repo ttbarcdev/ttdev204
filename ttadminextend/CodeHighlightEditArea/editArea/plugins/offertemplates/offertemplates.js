@@ -166,6 +166,7 @@ var EditArea_offertemplates= {
 						'<option value="preftbSurlLogoutBusiness">Logout Banner (Business)</option>' +
 						'<option value="ftbProductPromoCarouselNoRHS">FTB ProductPromoCarousel (no RHS info)</option>' +
 						'<option value="ftbProductPromoCarouselNoRHSTitleTooltip">FTB ProductPromoCarousel (no RHS info, Tooltip on Title)</option>' +
+						'<option value="ftbProductPromoCarouselNoRHSInlineLegal">FTB ProductPromoCarousel (no RHS info, Legal Copy under Main copy)</option>' +
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
@@ -286,6 +287,51 @@ var EditArea_offertemplates= {
 
 						'<label for="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget" style="width: 55px; font-style: italic;">Main CTA Target</label>' +
 						'<input type="text" id="ftbProductPromoCarouselNoRHSTitleTooltipFS_MainCTATarget" placeholder=\'example: _blank\' style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 12px;margin-left: 5px;font-size: 10px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
+						/* Template Begin */
+
+
+						'<fieldset class="ftbProductPromoCarouselNoRHSInlineLegalFS ttOfferPatternInputs">' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL" placeholder="example: /OLB/A/Content/Images/1242645340532-globe-icon.png" style="width: 440px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT" style="width: 40px;">Image ALT</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT" placeholder="example: Global promo" style="width: 190px;"  />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_Title" class="ttclr" style="width: 55px;">Title</label>' +
+						'<input type="text" value="" id="ftbProductPromoCarouselNoRHSInlineLegalFS_Title" placeholder="example: Personalise your debit card" style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy" style="width: 45px;margin-right: 15px;">Main copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy" placeholder=\'example: Upload your favourite photo or choose from our extensive gallery.\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy" class="ttclr" style="width:55px;">Main CTA Copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy" placeholder=\'example: Get card\' style="width:240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL" style="width:55px;">Main CTA URL</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL" placeholder=\'example: /olb/balances/PersonalFinancialSummary.action\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy" style="width:55px;" class="ttclr">Legal Copy</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy" placeholder=\'example: Terms and conditions apply.\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget" style="width: 55px; font-style: italic;">Main CTA Target</label>' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget" placeholder=\'example: _blank\' style="width: 240px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
 						'<span style="font-family: verdana;float: left;margin-top: 12px;margin-left: 5px;font-size: 10px;">(Leave empty or type in _blank for new window)</span>'+
 
