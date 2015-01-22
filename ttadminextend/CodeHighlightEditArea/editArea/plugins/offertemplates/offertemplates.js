@@ -799,7 +799,7 @@ var EditArea_offertemplates= {
 									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy').val().replace(/£/g,'&pound;'),
 									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy').val().replace(/£/g,'&pound;'),
 									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL').val(),
-									ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy').val().replace(/£/g,'&pound;').replace(/&/g,'&amp;'),
 									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget').val();
 
 								if (
