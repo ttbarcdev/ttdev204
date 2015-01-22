@@ -327,13 +327,13 @@ var EditArea_offertemplates= {
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy" style="width:55px;" class="ttclr">Legal Copy</label>' +
-						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy" placeholder=\'example: Terms and conditions apply.\' style="width: 375px;" />' +
+						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy" placeholder=\'example: Terms and conditions apply.\' style="width: 240px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget" style="width: 55px; font-style: italic;">Main CTA Target</label>' +
 						'<input type="text" id="ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget" placeholder=\'example: _blank\' style="width: 240px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
-						'<span style="font-family: verdana;float: left;margin-top: 12px;margin-left: 5px;font-size: 10px;">(Leave empty or type in _blank for new window)</span>'+
+						'<span style="font-family: verdana;float: left;margin-top: 0;margin-left: 5px;font-size: 10px; width: 110px;">(Leave empty or type in _blank for new window)</span>'+
 
 						'<input type="button" value="Generate HTML" class="btn" />' +
 
@@ -789,6 +789,54 @@ var EditArea_offertemplates= {
 								}
 								break;
 							/* Template End */
+
+							/* Template Begin */
+							case 'ftbProductPromoCarouselNoRHSInlineLegal':
+
+								var ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL').val(),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT').val(),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_Title = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_Title').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL').val(),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget = $('#ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget').val();
+
+								if (
+									ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_Title=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy=='' ||
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL == ''
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget!=''){
+										ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget=" target=\""+ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget+"\"";
+									}
+
+									ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopyCombined="<p>"+ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopy+" <a href=\""+ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTAURL+"\""+ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTATarget+" class=\"ttMainCTA\">"+ftbProductPromoCarouselNoRHSInlineLegalFS_MainCTACopy+"</a></p>";
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecProdPromoCarousel\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\x3Cimg src=\""+ftbProductPromoCarouselNoRHSInlineLegalFS_Image_URL+"\" alt=\""+ftbProductPromoCarouselNoRHSInlineLegalFS_Image_ALT+"\" height=\"34\" width=\"34\"\x3E" +
+										"\n\t\t\x3Ch3\x3E"+ftbProductPromoCarouselNoRHSInlineLegalFS_Title+"\x3C\x2Fh3\x3E" +
+										"\n\t\t" +ftbProductPromoCarouselNoRHSInlineLegalFS_MainCopyCombined+
+										"\n\t\t\x3Cp class=\"ttInlineTC\"\x3E"+ftbProductPromoCarouselNoRHSInlineLegalFS_LegalCopy+"\x3C\x2Fp\x3E"+
+										"\n\t\x3C\x2Fdiv\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+								break;
+								/* Template End */
 
 							/* Template Begin */
 
