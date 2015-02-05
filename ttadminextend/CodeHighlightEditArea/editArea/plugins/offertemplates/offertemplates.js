@@ -1108,7 +1108,7 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
 										"\n\t\t\t\t\x3Ca href=\""+ftbGhostAccountTooltipFSMainHeadlineURL+"\""+ftbGhostAccountTooltipFSMainHeadlineURLTarget+" class=\"ttGAMainTitleCTA\"\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGAIco\"\x3E\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountTooltipFSMainHeadline+"\x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbGhostAccountTooltipFSMainHeadlineTooltip+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountTooltipFSMainHeadline+" \x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbGhostAccountTooltipFSMainHeadlineTooltip+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\t\x3C\x2Fa\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
