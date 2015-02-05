@@ -169,6 +169,7 @@ var EditArea_offertemplates= {
 						'<option value="ftbProductPromoCarouselNoRHSInlineLegal">FTB ProductPromoCarousel (no RHS info, Legal Copy under Main copy)</option>' +
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
+						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Tooltip)</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
 						'<option value="ftbServicesPromoCarousel">FTB ServicesPromoCarousel</option>' +
 						'</select>' +
@@ -448,6 +449,79 @@ var EditArea_offertemplates= {
 
 						'<label for="ftbGhostAccountFSSideBul3Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (3)</label>' +
 						'<input type="text" value="" id="ftbGhostAccountFSSideBul3Supline" placeholder="example: Get your best rate of return" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'</div>'+
+
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
+						/* Template Begin */
+
+						'<fieldset class="ftbGhostAccountTooltipFS ttOfferPatternInputs">' +
+
+						'<label for="ftbGhostAccountTooltipFSMainHeadline" style="width: 85px;">Main Headline Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainHeadline" placeholder="example: Start saving for the future" style="width: 190px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainHeadlineURL" style="width: 85px;">Main Headline URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainHeadlineURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 350px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainHeadlineURLTarget" style="width: 85px; font-style: italic;" class="ttclr">Main Headline URL Target</label>' +
+						'<input type="text" id="ftbGhostAccountTooltipFSMainHeadlineURLTarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<label for="ftbGhostAccountTooltipFSMainHeadlineTooltip" style="width: 85px;">Main Headline Tooltip</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainHeadlineTooltip" placeholder="example: Terms, conditions and exclusions apply." style="width: 350px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainCopy" style="width: 85px; margin-top: 12px;" class="ttclr">Main Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainCopy" placeholder="example: Open a savings account in just a few clicks and save regularly." style="width: 360px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainCTACopy" style="width: 65px;">Main CTA Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainCTACopy" placeholder="example: Apply now" style="width: 200px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainCTAURL" style="width: 85px; margin-top: 12px;" class="ttclr">Main CTA URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 360px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSMainCTATarget" style="width: 65px; font-style: italic;">Main CTA Target</label>' +
+						'<input type="text" id="ftbGhostAccountTooltipFSMainCTATarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 8px;margin-left: 1px;font-size: 9px;width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<div style="padding-top: 10px;	float: left;clear: both; margin-top: 15px;border-top: 1px dotted #ccc;">'+
+
+						'<label for="ftbGhostAccountTooltipFSSideBul1Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (1)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul1Headline" placeholder="example: We have a choice of accounts" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSSideBul1Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (1)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul1Supline" placeholder="example: ISAs, Instant access, bonds" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSSideBul2Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (2)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul2Headline" placeholder="example: Access your cash how you want" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSSideBul2Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (2)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul2Supline" placeholder="example: Withdraw it easily or lock it away" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSSideBul3Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (3)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul3Headline" placeholder="example: Competitive interest rates" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountTooltipFSSideBul3Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (3)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul3Supline" placeholder="example: Get your best rate of return" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'</div>'+
@@ -944,13 +1018,13 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
 										"\n\t\t\t\t\x3Ca href=\""+ftbGhostAccountFSMainHeadlineURL+"\""+ftbGhostAccountFSMainHeadlineURLTarget+" class=\"ttGAMainTitleCTA\"\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGAIco\"\x3E\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGATitle\"\x3E"+ftbGhostAccountFSMainHeadline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountFSMainHeadline+"\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\t\x3C\x2Fa\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
-										"\n\t\t\t\t\x3Cp\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttGAMainCopyWrap\"\x3E" +
 										"\n\t\t\t\t\t"+ftbGhostAccountFSMainCopy+" \x3Ca href=\""+ftbGhostAccountFSMainCTAURL+"\""+ftbGhostAccountFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
-										"\n\t\t\t\t\x3C\x2Fp\x3E" +
+										"\n\t\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
 										"\n\t\t\x3Cli class=\"ttGASide\"\x3E" +
@@ -966,6 +1040,96 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\t\x3Cli\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountFSSideBul3Headline+"\x3C\x2Fspan\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountFSSideBul3Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\x3C\x2Ful\x3E" +
+										"\n\t\t\x3C\x2Fli\x3E" +
+										"\n\t\x3C\x2Ful\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+
+								break;
+
+							/* Template End */
+
+							/* Template Begin */
+
+							case 'ftbGhostAccountTooltip':
+
+								var ftbGhostAccountTooltipFSMainHeadline = $('#ftbGhostAccountTooltipFSMainHeadline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSMainHeadlineURL = $('#ftbGhostAccountTooltipFSMainHeadlineURL').val(),
+									ftbGhostAccountTooltipFSMainHeadlineURLTarget = $('#ftbGhostAccountTooltipFSMainHeadlineURLTarget').val(),
+									ftbGhostAccountTooltipFSMainHeadlineTooltip = $('#ftbGhostAccountTooltipFSMainHeadlineTooltip').val(),
+									ftbGhostAccountTooltipFSMainCopy = $('#ftbGhostAccountTooltipFSMainCopy').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSMainCTACopy = $('#ftbGhostAccountTooltipFSMainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSMainCTAURL = $('#ftbGhostAccountTooltipFSMainCTAURL').val(),
+									ftbGhostAccountTooltipFSMainCTATarget = $('#ftbGhostAccountTooltipFSMainCTATarget').val(),
+									ftbGhostAccountTooltipFSSideBul1Headline = $('#ftbGhostAccountTooltipFSSideBul1Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSSideBul1Supline = $('#ftbGhostAccountTooltipFSSideBul1Supline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSSideBul2Headline = $('#ftbGhostAccountTooltipFSSideBul2Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSSideBul2Supline = $('#ftbGhostAccountTooltipFSSideBul2Supline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSSideBul3Headline = $('#ftbGhostAccountTooltipFSSideBul3Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountTooltipFSSideBul3Supline = $('#ftbGhostAccountTooltipFSSideBul3Supline').val().replace(/£/g,'&pound;');
+
+								if (
+									ftbGhostAccountTooltipFSMainHeadline=='' ||
+									ftbGhostAccountTooltipFSMainHeadlineURL=='' ||
+									ftbGhostAccountTooltipFSMainHeadlineTooltip=='' ||
+									ftbGhostAccountTooltipFSMainCopy=='' ||
+									ftbGhostAccountTooltipFSMainCTACopy=='' ||
+									ftbGhostAccountTooltipFSMainCTAURL=='' ||
+									ftbGhostAccountTooltipFSSideBul1Headline=='' ||
+									ftbGhostAccountTooltipFSSideBul1Supline=='' ||
+									ftbGhostAccountTooltipFSSideBul2Headline=='' ||
+									ftbGhostAccountTooltipFSSideBul2Supline=='' ||
+									ftbGhostAccountTooltipFSSideBul3Headline=='' ||
+									ftbGhostAccountTooltipFSSideBul3Supline==''
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbGhostAccountTooltipFSMainHeadlineURLTarget!=''){
+										ftbGhostAccountTooltipFSMainHeadlineURLTarget=" target=\""+ftbGhostAccountTooltipFSMainHeadlineURLTarget+"\"";
+									}
+
+									if (ftbGhostAccountTooltipFSMainCTATarget!=''){
+										ftbGhostAccountTooltipFSMainCTATarget=" target=\""+ftbGhostAccountTooltipFSMainCTATarget+"\"";
+									}
+
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecGhostAccount\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cul class=\"ttGAWrap\"\x3E" +
+										"\n\t\t\x3Cli class=\"ttGAMain\"\x3E" +
+										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
+										"\n\t\t\t\t\x3Ca href=\""+ftbGhostAccountTooltipFSMainHeadlineURL+"\""+ftbGhostAccountTooltipFSMainHeadlineURLTarget+" class=\"ttGAMainTitleCTA\"\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGAIco\"\x3E\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountTooltipFSMainHeadline+"\x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbGhostAccountTooltipFSMainHeadlineTooltip+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\t\x3C\x2Fa\x3E" +
+										"\n\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttGAMainCopyWrap\"\x3E" +
+										"\n\t\t\t\t\t"+ftbGhostAccountTooltipFSMainCopy+" \x3Ca href=\""+ftbGhostAccountTooltipFSMainCTAURL+"\""+ftbGhostAccountTooltipFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountTooltipFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
+										"\n\t\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\x3Cli class=\"ttGASide\"\x3E" +
+										"\n\t\t\t\x3Cul class=\"ttGASideList\"\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountTooltipFSSideBul1Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountTooltipFSSideBul1Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountTooltipFSSideBul2Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountTooltipFSSideBul2Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountTooltipFSSideBul3Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountTooltipFSSideBul3Supline+"\x3C\x2Fspan\x3E" +
 										"\n\t\t\t\t\x3C\x2Fli\x3E" +
 										"\n\t\t\t\x3C\x2Ful\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
@@ -1037,16 +1201,16 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
 										"\n\t\t\t\t\x3Ca href=\""+ftbGhostAccountSmartSpendFSMainHeadlineURL+"\""+ftbGhostAccountSmartSpendFSMainHeadlineURLTarget+" class=\"ttGAMainTitleCTA\"\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGAIco\"\x3E\x3C\x2Fspan\x3E" +
-										"\n\t\t\t\t\t\x3Cspan class=\"ttGATitle\"\x3E"+ftbGhostAccountSmartSpendFSMainHeadline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountSmartSpendFSMainHeadline+"\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\t\x3C\x2Fa\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
-										"\n\t\t\t\t\x3Cp\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttGAMainCopyWrap\"\x3E" +
 										"\n\t\t\t\t\t"+ftbGhostAccountSmartSpendFSMainCopy+
-										"\n\t\t\t\t\x3C\x2Fp\x3E" +
-										"\n\t\t\t\t\x3Cp class=\"ttMainCopyCTAPar\"\x3E" +
+										"\n\t\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttGAMainCopyWrap ttMainCopyCTAPar\"\x3E" +
 										"\n\t\t\t\t\t\x3Ca href=\""+ftbGhostAccountSmartSpendFSMainCTAURL+"\""+ftbGhostAccountSmartSpendFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountSmartSpendFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
-										"\n\t\t\t\t\x3C\x2Fp\x3E" +
+										"\n\t\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
 										"\n\t\t\x3Cli class=\"ttGASide\"\x3E" +
