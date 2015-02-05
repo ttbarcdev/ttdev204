@@ -477,8 +477,8 @@ var EditArea_offertemplates= {
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
 						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
 
-						'<label for="ftbGhostAccountTooltipFSMainHeadlineTooltip" style="width: 85px;">Main Headline Tooltip</label>' +
-						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainHeadlineTooltip" placeholder="example: Terms, conditions and exclusions apply." style="width: 350px;" />' +
+						'<label for="ftbGhostAccountTooltipFSMainHeadlineTooltip" style="width: 85px; margin-left: 10px; margin-top: 5px;">Main Headline Tooltip</label>' +
+						'<input type="text" value="" id="ftbGhostAccountTooltipFSMainHeadlineTooltip" placeholder="example: Terms, conditions and exclusions apply." style="width: 328px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbGhostAccountTooltipFSMainCopy" style="width: 85px; margin-top: 12px;" class="ttclr">Main Copy</label>' +
