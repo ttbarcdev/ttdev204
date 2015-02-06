@@ -563,7 +563,7 @@ var EditArea_offertemplates= {
 						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 360px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
-						'<label for="ftbGhostAccountInlineLegalFSMainCTATarget" style="width: 65px; font-style: italic;">Main CTA Target</label>' +
+						'<label for="ftbGhostAccountInlineLegalFSMainCTATarget" style="width: 65px; font-style: italic;" class="ttclr">Main CTA Target</label>' +
 						'<input type="text" id="ftbGhostAccountInlineLegalFSMainCTATarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
 						'<span style="font-family: verdana;float: left;margin-top: 8px;margin-left: 1px;font-size: 9px;width: 125px;">(Leave empty or type in _blank for new window)</span>'+
