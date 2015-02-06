@@ -165,11 +165,12 @@ var EditArea_offertemplates= {
 						'<option value="preftbSurlLogoutPersonalPremier">Logout Banner (Personal &amp; Premier)</option>' +
 						'<option value="preftbSurlLogoutBusiness">Logout Banner (Business)</option>' +
 						'<option value="ftbProductPromoCarouselNoRHS">FTB ProductPromoCarousel (no RHS info)</option>' +
-						'<option value="ftbProductPromoCarouselNoRHSTitleTooltip">FTB ProductPromoCarousel (no RHS info, Tooltip on Title)</option>' +
+						'<option value="ftbProductPromoCarouselNoRHSTitleTooltip">FTB ProductPromoCarousel (no RHS info, Legal Tooltip on Title)</option>' +
 						'<option value="ftbProductPromoCarouselNoRHSInlineLegal">FTB ProductPromoCarousel (no RHS info, Legal Copy under Main copy)</option>' +
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
-						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Tooltip)</option>' +
+						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Legal Tooltip)</option>' +
+						'<option value="ftbGhostAccountInlineLegal">FTB GhostAccount (with Legal Copy under Main copy)</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
 						'<option value="ftbServicesPromoCarousel">FTB ServicesPromoCarousel</option>' +
 						'</select>' +
@@ -522,6 +523,80 @@ var EditArea_offertemplates= {
 
 						'<label for="ftbGhostAccountTooltipFSSideBul3Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (3)</label>' +
 						'<input type="text" value="" id="ftbGhostAccountTooltipFSSideBul3Supline" placeholder="example: Get your best rate of return" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'</div>'+
+
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
+						/* Template Begin */
+
+						'<fieldset class="ftbGhostAccountInlineLegalFS ttOfferPatternInputs">' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainHeadline" style="width: 85px;">Main Headline Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainHeadline" placeholder="example: Start saving for the future" style="width: 190px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainHeadlineURL" style="width: 85px;">Main Headline URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainHeadlineURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 350px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainHeadlineURLTarget" style="width: 85px; font-style: italic;" class="ttclr">Main Headline URL Target</label>' +
+						'<input type="text" id="ftbGhostAccountInlineLegalFSMainHeadlineURLTarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 6px;margin-left: 2px;font-size: 10px; width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<label for="ftbGhostAccountInlineLegalFSMainCopy" style="width: 85px; margin-top: 12px;" class="ttclr">Main Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainCopy" placeholder="example: Open a savings account in just a few clicks and save regularly." style="width: 360px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainCTACopy" style="width: 65px;">Main CTA Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainCTACopy" placeholder="example: Apply now" style="width: 200px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainCTAURL" style="width: 85px; margin-top: 12px;" class="ttclr">Main CTA URL</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSMainCTAURL" placeholder="example: /olb/balances/PersonalFinancialSummary.action" style="width: 360px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSMainCTATarget" style="width: 65px; font-style: italic;">Main CTA Target</label>' +
+						'<input type="text" id="ftbGhostAccountInlineLegalFSMainCTATarget" placeholder=\'example: _blank\' style="width: 90px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 8px;margin-left: 1px;font-size: 9px;width: 125px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<label for="ftbGhostAccountInlineLegalFSLegalCopy" style="width: 85px; margin-left: 10px; margin-top: 5px;">Legal Copy</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSLegalCopy" placeholder="example: Your home may be repossessed if you do not keep up repayments on your Mortgage." style="width: 700px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+
+						'<div style="padding-top: 10px;	float: left;clear: both; margin-top: 15px;border-top: 1px dotted #ccc;">'+
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul1Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (1)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul1Headline" placeholder="example: We have a choice of accounts" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul1Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (1)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul1Supline" placeholder="example: ISAs, Instant access, bonds" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul2Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (2)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul2Headline" placeholder="example: Access your cash how you want" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul2Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (2)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul2Supline" placeholder="example: Withdraw it easily or lock it away" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul3Headline" style="width: 85px;font-size: 10px;margin-top: 12px;" class="ttclr">Side Headline (3)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul3Headline" placeholder="example: Competitive interest rates" style="width: 270px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbGhostAccountInlineLegalFSSideBul3Supline" style="width: 85px;font-size: 10px;margin-top: 12px;">Side Sup Line (3)</label>' +
+						'<input type="text" value="" id="ftbGhostAccountInlineLegalFSSideBul3Supline" placeholder="example: Get your best rate of return" style="width: 270px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'</div>'+
@@ -1130,6 +1205,97 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\t\x3Cli\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountTooltipFSSideBul3Headline+"\x3C\x2Fspan\x3E" +
 										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountTooltipFSSideBul3Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\x3C\x2Ful\x3E" +
+										"\n\t\t\x3C\x2Fli\x3E" +
+										"\n\t\x3C\x2Ful\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+
+								break;
+
+							/* Template End */
+
+							/* Template Begin */
+
+							case 'ftbGhostAccountInlineLegal':
+
+								var ftbGhostAccountInlineLegalFSMainHeadline = $('#ftbGhostAccountInlineLegalFSMainHeadline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSMainHeadlineURL = $('#ftbGhostAccountInlineLegalFSMainHeadlineURL').val(),
+									ftbGhostAccountInlineLegalFSMainHeadlineURLTarget = $('#ftbGhostAccountInlineLegalFSMainHeadlineURLTarget').val(),
+									ftbGhostAccountInlineLegalFSMainCopy = $('#ftbGhostAccountInlineLegalFSMainCopy').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSMainCTACopy = $('#ftbGhostAccountInlineLegalFSMainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSMainCTAURL = $('#ftbGhostAccountInlineLegalFSMainCTAURL').val(),
+									ftbGhostAccountInlineLegalFSMainCTATarget = $('#ftbGhostAccountInlineLegalFSMainCTATarget').val(),
+									ftbGhostAccountInlineLegalFSLegalCopy = $('#ftbGhostAccountInlineLegalFSLegalCopy').val(),
+									ftbGhostAccountInlineLegalFSSideBul1Headline = $('#ftbGhostAccountInlineLegalFSSideBul1Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSSideBul1Supline = $('#ftbGhostAccountInlineLegalFSSideBul1Supline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSSideBul2Headline = $('#ftbGhostAccountInlineLegalFSSideBul2Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSSideBul2Supline = $('#ftbGhostAccountInlineLegalFSSideBul2Supline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSSideBul3Headline = $('#ftbGhostAccountInlineLegalFSSideBul3Headline').val().replace(/£/g,'&pound;'),
+									ftbGhostAccountInlineLegalFSSideBul3Supline = $('#ftbGhostAccountInlineLegalFSSideBul3Supline').val().replace(/£/g,'&pound;');
+
+								if (
+									ftbGhostAccountInlineLegalFSMainHeadline=='' ||
+									ftbGhostAccountInlineLegalFSMainHeadlineURL=='' ||
+									ftbGhostAccountInlineLegalFSMainCopy=='' ||
+									ftbGhostAccountInlineLegalFSMainCTACopy=='' ||
+									ftbGhostAccountInlineLegalFSMainCTAURL=='' ||
+									ftbGhostAccountInlineLegalFSLegalCopy=='' ||
+									ftbGhostAccountInlineLegalFSSideBul1Headline=='' ||
+									ftbGhostAccountInlineLegalFSSideBul1Supline=='' ||
+									ftbGhostAccountInlineLegalFSSideBul2Headline=='' ||
+									ftbGhostAccountInlineLegalFSSideBul2Supline=='' ||
+									ftbGhostAccountInlineLegalFSSideBul3Headline=='' ||
+									ftbGhostAccountInlineLegalFSSideBul3Supline==''
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbGhostAccountInlineLegalFSMainHeadlineURLTarget!=''){
+										ftbGhostAccountInlineLegalFSMainHeadlineURLTarget=" target=\""+ftbGhostAccountInlineLegalFSMainHeadlineURLTarget+"\"";
+									}
+
+									if (ftbGhostAccountInlineLegalFSMainCTATarget!=''){
+										ftbGhostAccountInlineLegalFSMainCTATarget=" target=\""+ftbGhostAccountInlineLegalFSMainCTATarget+"\"";
+									}
+
+
+									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecGhostAccount\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cul class=\"ttGAWrap\"\x3E" +
+										"\n\t\t\x3Cli class=\"ttGAMain\"\x3E" +
+										"\n\t\t\t\x3Cdiv class=\"ttGAMainTitle\"\x3E" +
+										"\n\t\t\t\t\x3Ca href=\""+ftbGhostAccountInlineLegalFSMainHeadlineURL+"\""+ftbGhostAccountInlineLegalFSMainHeadlineURLTarget+" class=\"ttGAMainTitleCTA\"\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGAIco\"\x3E\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cdiv class=\"ttGATitle\"\x3E"+ftbGhostAccountInlineLegalFSMainHeadline+ "\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\t\x3C\x2Fa\x3E" +
+										"\n\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\x3Cdiv class=\"ttGAMainCopy\"\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttGAMainCopyWrap\"\x3E" +
+										"\n\t\t\t\t\t"+ftbGhostAccountInlineLegalFSMainCopy+" \x3Ca href=\""+ftbGhostAccountInlineLegalFSMainCTAURL+"\""+ftbGhostAccountInlineLegalFSMainCTATarget+" class=\"ttMainCopyCTA\"\x3E"+ftbGhostAccountInlineLegalFSMainCTACopy+"\x3Cspan class=\"ttGAMainCopyIco\"\x3E\x3C\x2Fspan\x3E\x3C\x2Fa\x3E" +
+										"\n\t\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttInlineTC\"\x3E"+ftbGhostAccountInlineLegalFSLegalCopy+"\x3C\x2Fdiv\x3E"+
+										"\n\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\x3Cli class=\"ttGASide\"\x3E" +
+										"\n\t\t\t\x3Cul class=\"ttGASideList\"\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul1Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul1Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul2Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul2Supline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListHeadLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul3Headline+"\x3C\x2Fspan\x3E" +
+										"\n\t\t\t\t\t\x3Cspan class=\"ttGASideListSupLine\"\x3E"+ftbGhostAccountInlineLegalFSSideBul3Supline+"\x3C\x2Fspan\x3E" +
 										"\n\t\t\t\t\x3C\x2Fli\x3E" +
 										"\n\t\t\t\x3C\x2Ful\x3E" +
 										"\n\t\t\x3C\x2Fli\x3E" +
