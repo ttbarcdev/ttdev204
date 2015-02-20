@@ -172,7 +172,7 @@ var EditArea_offertemplates= {
 						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Legal Tooltip)</option>' +
 						'<option value="ftbGhostAccountInlineLegal">FTB GhostAccount (with Legal Copy under Main copy)</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
-						//'<option value="ftbProductPromo4Large">FTB ProductPromo4 Large</option>' +
+						'<option value="ftbProductPromo4Large">FTB ProductPromo4 Large</option>' +
 						//'<option value="ftbProductPromo4LargeTooltip">FTB ProductPromo4 Large (with Legal Tooltip)</option>' +
 						'<option value="ftbProductPromo4LargeInlineLegal">FTB ProductPromo4 Large (with Legal Copy at the bottom)</option>' +
 						'<option value="ftbServicesPromoCarousel">FTB ServicesPromoCarousel</option>' +
@@ -686,10 +686,51 @@ var EditArea_offertemplates= {
 						/* Template Begin */
 
 
+						'<fieldset class="ftbProductPromo4LargeFS ttOfferPatternInputs">' +
+
+						'<label for="ftbProductPromo4LargeFS_Image_URL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbProductPromo4LargeFS_Image_URL" placeholder="example: /OLB/A/Content/Images/1321077922916-prod_pers_bloan_large.jpg" style="width: 440px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromo4LargeFS_Image_ALT" style="width: 40px;">Image ALT</label>' +
+						'<input type="text" value="" id="ftbProductPromo4LargeFS_Image_ALT" placeholder="example: Barclayloan" style="width: 190px;"  />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromo4LargeFS_Title" class="ttclr" style="width: 55px;">Title</label>' +
+						'<input type="text" value="" id="ftbProductPromo4LargeFS_Title" placeholder="example: We could lend you £15000" style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+
+						'<label for="ftbProductPromo4LargeFS_MainCopy" style="width: 45px;margin-right: 15px;">Main copy</label>' +
+						'<input type="text" id="ftbProductPromo4LargeFS_MainCopy" placeholder=\'example: A Barclayloan can help you buy a new car.\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromo4LargeFS_MainCTACopy" class="ttclr" style="width:55px;">Main CTA Copy</label>' +
+						'<input type="text" id="ftbProductPromo4LargeFS_MainCTACopy" placeholder=\'example: Get a quote\' style="width:240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromo4LargeFS_MainCTAURL" style="width:55px;">Main CTA URL</label>' +
+						'<input type="text" id="ftbProductPromo4LargeFS_MainCTAURL" placeholder=\'example: /olb/products/LoanOverviewLink.action\' style="width: 375px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
+
+						'<label for="ftbProductPromo4LargeFS_MainCTATarget" class="ttclr" style="width: 55px; font-style: italic;">Main CTA Target</label>' +
+						'<input type="text" id="ftbProductPromo4LargeFS_MainCTATarget" placeholder=\'example: _blank\' style="width: 240px;" />' +
+						'<a href="#" class="ttCopyFromExample" title="Copy from example" style="margin-right:0;">*</a>' +
+						'<span style="font-family: verdana;float: left;margin-top: 10px;margin-left: 5px;font-size: 10px; width: 300px;">(Leave empty or type in _blank for new window)</span>'+
+
+						'<input type="button" value="Generate HTML" class="btn" />' +
+
+						'</fieldset>' +
+
+						/* Template End */
+
+						/* Template Begin */
+
+
 						'<fieldset class="ftbProductPromo4LargeInlineLegalFS ttOfferPatternInputs">' +
 
-						'<label for="ftbProductPromo4LargeInlineLegalFS_Image_URL" style="width: 55px;">Image URL</label>' +
-						'<input type="text" value="" id="ftbProductPromo4LargeInlineLegalFS_Image_URL" placeholder="example: /OLB/A/Content/Images/1321077922916-prod_pers_bloan_large.jpg" style="width: 440px;" />' +
+						'<label for="ftbProductPromo4LargeInlineLegal_Image_URL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbProductPromo4LargeInlineLegal_Image_URL" placeholder="example: /OLB/A/Content/Images/1321077922916-prod_pers_bloan_large.jpg" style="width: 440px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromo4LargeInlineLegalFS_Image_ALT" style="width: 40px;">Image ALT</label>' +
@@ -1446,6 +1487,59 @@ var EditArea_offertemplates= {
 
 								break;
 
+							/* Template End */
+
+
+							/* Template Begin */
+							case 'ftbProductPromo4Large':
+
+								var ftbProductPromo4LargeFS_Image_URL = $('#ftbProductPromo4LargeFS_Image_URL').val(),
+									ftbProductPromo4LargeFS_Image_ALT = $('#ftbProductPromo4LargeFS_Image_ALT').val(),
+									ftbProductPromo4LargeFS_Title = $('#ftbProductPromo4LargeFS_Title').val().replace(/£/g,'&pound;'),
+									ftbProductPromo4LargeFS_MainCopy = $('#ftbProductPromo4LargeFS_MainCopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromo4LargeFS_MainCTACopy = $('#ftbProductPromo4LargeFS_MainCTACopy').val().replace(/£/g,'&pound;'),
+									ftbProductPromo4LargeFS_MainCTAURL = $('#ftbProductPromo4LargeFS_MainCTAURL').val(),
+									ftbProductPromo4LargeFS_MainCTATarget = $('#ftbProductPromo4LargeFS_MainCTATarget').val();
+
+								if (
+									ftbProductPromo4LargeFS_Image_URL=='' ||
+									ftbProductPromo4LargeFS_Image_ALT=='' ||
+									ftbProductPromo4LargeFS_Title=='' ||
+									ftbProductPromo4LargeFS_MainCopy=='' ||
+									ftbProductPromo4LargeFS_MainCTACopy=='' ||
+									ftbProductPromo4LargeFS_MainCTAURL == ''
+									){
+									alert('Please provide information for all fields, unless they are optional (marked with italic label)!');
+									break;
+								}else{
+
+									if (ftbProductPromo4LargeFS_MainCTATarget!=''){
+										ftbProductPromo4LargeFS_MainCTATarget=" target=\""+ftbProductPromo4LargeFS_MainCTATarget+"\"";
+									}
+
+									ftbProductPromo4LargeFS_MainCopyCombined="<p>"+ftbProductPromo4LargeFS_MainCopy+" </p>\n\n\t\t\t\t\t<a href=\""+ftbProductPromo4LargeFS_MainCTAURL+"\""+ftbProductPromo4LargeFS_MainCTATarget+" class=\"ttMainCTA\">"+ftbProductPromo4LargeFS_MainCTACopy+"</a>";
+
+
+									ttOutputHTML = "\x3Cdiv class=\"clearfix ttSecProductPromoLargeContent\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\x3Cul class=\"col1\"\x3E" +
+										"\n\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\x3Cimg src=\""+ftbProductPromo4LargeFS_Image_URL+"\" alt=\""+ftbProductPromo4LargeFS_Image_ALT+"\" height=\"333\" width=\"870\"\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttSPPLCContentWrapper\"\x3E" +
+										"\n\t\t\t\t\t\x3Ch3\x3E"+ftbProductPromo4LargeFS_Title+"\x3C\x2Fh3\x3E" +
+										"\n\n\t\t\t\t\t" +ftbProductPromo4LargeFS_MainCopyCombined+
+										"\n\n\t\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\x3C\x2Ful\x3E" +
+										"\n\t\x3C\x2Fdiv\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+
+									parent.editAreaLoader.setValue(editArea.id, ttOutputHTML);
+									window.focus();
+
+									$('#ttInnerFormOfferPattern').hide();
+								}
+								break;
 							/* Template End */
 
 							/* Template Begin */
