@@ -1480,14 +1480,31 @@ var EditArea_offertemplates= {
 										ftbProductPromo4LargeInlineLegalFS_MainCTATarget=" target=\""+ftbProductPromo4LargeInlineLegalFS_MainCTATarget+"\"";
 									}
 
-									ftbProductPromo4LargeInlineLegalFS_MainCopyCombined="<p>"+ftbProductPromo4LargeInlineLegalFS_MainCopy+" <a href=\""+ftbProductPromo4LargeInlineLegalFS_MainCTAURL+"\""+ftbProductPromo4LargeInlineLegalFS_MainCTATarget+" class=\"ttMainCTA\">"+ftbProductPromo4LargeInlineLegalFS_MainCTACopy+"</a></p>";
+									ftbProductPromo4LargeInlineLegalFS_MainCopyCombined="<p>"+ftbProductPromo4LargeInlineLegalFS_MainCopy+" </p>\n\t<a href=\""+ftbProductPromo4LargeInlineLegalFS_MainCTAURL+"\""+ftbProductPromo4LargeInlineLegalFS_MainCTATarget+" class=\"ttMainCTA\">"+ftbProductPromo4LargeInlineLegalFS_MainCTACopy+"</a>";
 
+									/*
 									ttOutputHTML="\x3Cdiv class=\"clearfix ttSecProdPromoCarousel\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
 										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
 										"\n\t\t\x3Cimg src=\""+ftbProductPromo4LargeInlineLegalFS_Image_URL+"\" alt=\""+ftbProductPromo4LargeInlineLegalFS_Image_ALT+"\" height=\"34\" width=\"34\"\x3E" +
 										"\n\t\t\x3Ch3\x3E"+ftbProductPromo4LargeInlineLegalFS_Title+"\x3C\x2Fh3\x3E" +
 										"\n\t\t" +ftbProductPromo4LargeInlineLegalFS_MainCopyCombined+
 										"\n\t\t\x3Cp class=\"ttInlineTC\"\x3E"+ftbProductPromo4LargeInlineLegalFS_LegalCopy+"\x3C\x2Fp\x3E"+
+										"\n\t\x3C\x2Fdiv\x3E" +
+										"\n\x3C\x2Fdiv\x3E";
+										*/
+
+									ttOutputHTML = "\x3Cdiv class=\"clearfix ttSecProductPromoLargeContent\" data-ttmeta-crid=\"${campaign.id}:${campaign.recipe.id}:${campaign.recipe.trafficType}\"\x3E" +
+										"\n\t\x3Cdiv class=\"snippet\"\x3E" +
+										"\n\t\t\x3Cul class=\"col1\"\x3E" +
+										"\n\t\t\t\x3Cli\x3E" +
+										"\n\t\t\t\t\x3Cimg src=\""+ftbProductPromo4LargeInlineLegalFS_Image_URL+"\" alt=\""+ftbProductPromo4LargeInlineLegalFS_Image_ALT+"\" height=\"333\" width=\"870\"\x3E" +
+										"\n\t\t\t\t\x3Cdiv class=\"ttSPPLCContentWrapper\"\x3E" +
+										"\n\t\t\t\t\t\x3Ch3\x3E"+ftbProductPromo4LargeInlineLegalFS_Title+"\x3C\x2Fh3\x3E" +
+										"\n\t\t" +ftbProductPromo4LargeInlineLegalFS_MainCopyCombined+
+										"\n\n\t\t\t\t\t\x3Ctable class=\"ttInlineTC\"\x3E\x3Ctbody\x3E\x3Ctr\x3E\x3Ctd\x3E"+ftbProductPromo4LargeInlineLegalFS_LegalCopy+"\x3C\x2Ftd\x3E\x3C\x2Ftr\x3E\x3C\x2Ftbody\x3E\x3C\x2Ftable\x3E" +
+										"\n\n\t\t\t\t\x3C\x2Fdiv\x3E" +
+										"\n\t\t\t\x3C\x2Fli\x3E" +
+										"\n\t\t\x3C\x2Ful\x3E" +
 										"\n\t\x3C\x2Fdiv\x3E" +
 										"\n\x3C\x2Fdiv\x3E";
 
