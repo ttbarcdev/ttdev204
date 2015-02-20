@@ -1625,7 +1625,7 @@ var EditArea_offertemplates= {
 										"\n\t\t\t\x3Cli\x3E" +
 										"\n\t\t\t\t\x3Cimg src=\""+ftbProductPromo4LargeTooltipFS_Image_URL+"\" alt=\""+ftbProductPromo4LargeTooltipFS_Image_ALT+"\" height=\"333\" width=\"870\"\x3E" +
 										"\n\t\t\t\t\x3Cdiv class=\"ttSPPLCContentWrapper\"\x3E" +
-										"\n\t\t\t\t\t\x3Ch3\x3E"+ftbProductPromo4LargeTooltipFS_Title+"\x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbProductPromo4LargeTooltipFS_LegalCopy+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fh3\x3E" +
+										"\n\t\t\t\t\t\x3Ch3\x3E"+ftbProductPromo4LargeTooltipFS_Title+" \x3C!-- Tooltip - START --\x3E\x3Cdiv class=\"tooltip ttTooltipLayout\"\x3E\x3Cdiv class=\"icon-tooltip-legal\"\x3E\x3C\x2Fdiv\x3E\x3Cspan\x3E\x3Cb\x3E\x3C\x2Fb\x3E\x3Cdiv class=\"content\"\x3E\x3Cp\x3E"+ftbProductPromo4LargeTooltipFS_LegalCopy+"\x3C\x2Fp\x3E\x3C\x2Fdiv\x3E\x3C\x2Fspan\x3E\x3C\x2Fdiv\x3E\x3C!-- Tooltip - END --\x3E"+"\x3C\x2Fh3\x3E" +
 										"\n\n\t\t\t\t\t" +ftbProductPromo4LargeTooltipFS_MainCopyCombined+
 										"\n\n\t\t\t\t\x3C\x2Fdiv\x3E" +
 										"\n\t\t\t\x3C\x2Fli\x3E" +
