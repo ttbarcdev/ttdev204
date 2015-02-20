@@ -169,11 +169,11 @@ var EditArea_offertemplates= {
 						'<option value="ftbProductPromoCarouselNoRHSInlineLegal">FTB ProductPromoCarousel (no RHS info, Legal Copy under Main copy)</option>' +
 						'<option value="ftbProductPromoCarouselWithRHS">FTB ProductPromoCarousel (with RHS info)</option>' +
 						'<option value="ftbGhostAccount">FTB GhostAccount</option>' +
-						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Legal Tooltip)</option>' +
+						'<option value="ftbGhostAccountTooltip">FTB GhostAccount (with Legal Tooltip on Title)</option>' +
 						'<option value="ftbGhostAccountInlineLegal">FTB GhostAccount (with Legal Copy under Main copy)</option>' +
 						'<option value="ftbGhostAccountSmartSpend">FTB GhostAccount-SmartSpend</option>' +
 						'<option value="ftbProductPromo4Large">FTB ProductPromo4 Large</option>' +
-						'<option value="ftbProductPromo4LargeTooltip">FTB ProductPromo4 Large (with Legal Tooltip)</option>' +
+						'<option value="ftbProductPromo4LargeTooltip">FTB ProductPromo4 Large (with Legal Tooltip on Title)</option>' +
 						'<option value="ftbProductPromo4LargeInlineLegal">FTB ProductPromo4 Large (with Legal Copy at the bottom)</option>' +
 						'<option value="ftbServicesPromoCarousel">FTB ServicesPromoCarousel</option>' +
 						'</select>' +
