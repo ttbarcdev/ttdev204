@@ -729,8 +729,8 @@ var EditArea_offertemplates= {
 
 						'<fieldset class="ftbProductPromo4LargeInlineLegalFS ttOfferPatternInputs">' +
 
-						'<label for="ftbProductPromo4LargeInlineLegal_Image_URL" style="width: 55px;">Image URL</label>' +
-						'<input type="text" value="" id="ftbProductPromo4LargeInlineLegal_Image_URL" placeholder="example: /OLB/A/Content/Images/1321077922916-prod_pers_bloan_large.jpg" style="width: 440px;" />' +
+						'<label for="ftbProductPromo4LargeInlineLegalFS_Image_URL" style="width: 55px;">Image URL</label>' +
+						'<input type="text" value="" id="ftbProductPromo4LargeInlineLegalFS_Image_URL" placeholder="example: /OLB/A/Content/Images/1321077922916-prod_pers_bloan_large.jpg" style="width: 440px;" />' +
 						'<a href="#" class="ttCopyFromExample" title="Copy from example">*</a>' +
 
 						'<label for="ftbProductPromo4LargeInlineLegalFS_Image_ALT" style="width: 40px;">Image ALT</label>' +
