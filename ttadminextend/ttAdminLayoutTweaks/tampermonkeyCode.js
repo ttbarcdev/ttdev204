@@ -17,10 +17,14 @@ if (window.location.href.indexOf("campaign_edit_forward.jsp") >= 0) {
 	ttinslayouttweakscssInnerHTML+="\r\n div.aui-container-screen {" +
 		"width: 98% !important;" +
 		"}"+
-		"{}"+
+		".aui-tooltip-new .aui-tooltip-item.aui-ellipsis.aui-grid-45{"+
+		"white-space: normal!important;  width: auto!important;  max-width: 708px;" + 
+		+"}"+
 
 		".aui-contextMenu {top: 8px;}";
 }
+
+
 if (window.location.href.indexOf("/launchpad") >= 0) {
 	ttinslayouttweakscssInnerHTML+="\r\n .launchpad-column.-last{width: 100%}"+
 		".aui-container-screen{width: 95%}\r\n"+
@@ -37,15 +41,15 @@ ttinslayouttweakscss.innerHTML = ttinslayouttweakscssInnerHTML;
 ttinslayouttweakshead.appendChild(ttinslayouttweakscss);
 var ttinslayouttweaksscript = document.createElement('script');
 ttinslayouttweaksscript.type = 'text/javascript';
-ttinslayouttweaksscript.text = ["document.addEventListener('DOMContentLoaded', function(){"+
+ttinslayouttweaksscript.text = [
 	"if (window.location.href.indexOf(\"campaign_edit_forward.jsp\") >= 0) {"+
 	"	setInterval(function() {" +
-	"		$j('span.-ellipsified').each(function(e){$j(this).html($j('#tooltip_'+$j(this).attr('id')).html());	});" +
+	"		$j('span.aui-ellipsis').each(function(e){$j(this).html($j('#tooltip_'+$j(this).attr('id')).html());	});" +
 	"	}, 2000);"+
 	"}"+
-	"if (window.location.href.indexOf(\"/launchpad\") >= 0) {"+
+	"if (window.location.href.indexOf(\"/launchpad\") >= 0) { "+
 	"	setTimeout(function() {" +
-	"		$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
+	"		//$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
 	"		$j('#aui-main table .aui-v-align-t:eq(0)').css({width: '200px'});\r\n"+
 	"		$j('.aui-container:contains(\"Learn how\"), h1:contains(\"Your Program Overview\")').remove();\r\n"+
 	"		$j('#notesFeed .m2-notesFeed .m2-helper-breakWord a').live('click',function(e){\r\n" + /* Go to Edit tab rather then spotlight */
@@ -55,8 +59,6 @@ ttinslayouttweaksscript.text = ["document.addEventListener('DOMContentLoaded', f
 	"			return false;\r\n" +
 	"		});\r\n"+
 	"	}, 2000);\r\n"+
-	"}"+
-	"});",
-	""
+	"}",
 ].join('');
 ttinslayouttweakshead.appendChild(ttinslayouttweaksscript);
