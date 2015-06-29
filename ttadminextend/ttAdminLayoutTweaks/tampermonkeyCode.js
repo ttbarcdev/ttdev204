@@ -49,7 +49,7 @@ ttinslayouttweaksscript.text = [
 	"}"+
 	"if (window.location.href.indexOf(\"/launchpad\") >= 0) { "+
 	"	setTimeout(function() {" +
-	"		//$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
+	"		$j('.launchpad-column:not(:contains(\"News Feed\"))').remove();\r\n"+ /* maybe not suitable for everyone, but works for me, Dashboard showing only recent history of changes */
 	"		$j('#aui-main table .aui-v-align-t:eq(0)').css({width: '200px'});\r\n"+
 	"		$j('.aui-container:contains(\"Learn how\"), h1:contains(\"Your Program Overview\")').remove();\r\n"+
 	"		$j('#notesFeed .m2-notesFeed .m2-helper-breakWord a').live('click',function(e){\r\n" + /* Go to Edit tab rather then spotlight */
